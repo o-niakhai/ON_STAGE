@@ -1,11 +1,11 @@
 import React from 'react';
-import HeaderAppBar from './components/Header';
+import Header from './components/Header';
 import './App.css';
 
 const App = () => {
   return (
     <div >
-      <HeaderAppBar />
+      <Header />
       gndhbfvd
     </div>
   );
