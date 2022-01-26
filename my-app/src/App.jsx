@@ -1,12 +1,14 @@
 import React from 'react';
-import MiniDrawer from './components/Header';
+import ResponsiveAppBar from './components/Header';
+import CSSGrid from '../src/components/Content'
 import './App.css';
 
 
 const App = () => {
   return (
     <div >
-      <MiniDrawer />
+      <ResponsiveAppBar />
+      <CSSGrid/>
     </div>
   );
 }
