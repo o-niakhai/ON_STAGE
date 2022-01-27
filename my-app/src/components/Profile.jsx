@@ -49,7 +49,7 @@ export default function ImageAvatars() {
                         </Button>
                     </Typography>
                     <Typography variant="h2"
-                        style={{fontSize: '1rem', fontWeight: 'light', '&:hover': {color: '#45D083'}}} >
+                        style={{fontSize: '1rem', fontWeight: 'light'}} >
                         <Link href="#" underline="hover" style={{ color: '#4F4F4F'}}>Musician</Link> / 
                         <Link href="#" underline="hover" style={{ color: '#4F4F4F'}}>Dj</Link> / 
                         <Link href="#" underline="hover" style={{ color: '#4F4F4F'}}>Electro</Link> / 
@@ -59,7 +59,6 @@ export default function ImageAvatars() {
                     </Typography>
                     <Typography variant="h6" style={{fontSize: '1rem'}}>
                         <LocationOnOutlinedIcon 
-                            sx={{ m: '2'}}
                             style={{ color: '#45D083' }}/> 
                                 Berlin, Germany
                     </Typography>
