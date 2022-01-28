@@ -2,7 +2,7 @@ import * as React from 'react';
 import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
-import ImageAvatars from '../components/Profile'
+import ProfileArtist from './ProfileArtist/ProfileArtist'
 
 
 const Item = styled(Paper)(({ theme }) => ({
@@ -18,7 +18,7 @@ export default function CSSGrid() {
       <Box display="grid" gridTemplateColumns="repeat(12, 1fr)" gap={2}>
         <Box gridColumn="span 8">
           <Item>
-            <ImageAvatars />
+            <ProfileArtist />
           </Item>
         </Box>
         <Box gridColumn="span 4">
