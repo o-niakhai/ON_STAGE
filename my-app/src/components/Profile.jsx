@@ -5,9 +5,15 @@ import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
-import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined';
 import Link from '@mui/material/Link';
 import Button from '@mui/material/Button';
+import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined';
+import MapsUgcRoundedIcon from '@mui/icons-material/MapsUgcRounded';
+import AddCommentRoundedIcon from '@mui/icons-material/AddCommentRounded';
+import FeaturedPlayListRoundedIcon from '@mui/icons-material/FeaturedPlayListRounded';
+import BusinessCenterRoundedIcon from '@mui/icons-material/BusinessCenterRounded';
+import BadgeRoundedIcon from '@mui/icons-material/BadgeRounded';
+import ScreenShareRoundedIcon from '@mui/icons-material/ScreenShareRounded';
 
 const Item = styled(Paper)(({ theme }) => ({
     ...theme.typography.body2,
@@ -22,10 +28,12 @@ export default function ImageAvatars() {
         <Grid container spacing={2} columns={12}>
             <Grid item xs={3}>
                 <Item sx={{ boxShadow: 0 }}>
+                    <Box m={2} >
                     <Avatar 
                         alt="Remy Sharp"
                         src="https://bi.im-g.pl/im/7e/c5/17/z24924286FBW,Kraftwerk-podczas-Festiwalu-Tauron-Nowa-Muzyka.jpg" 
-                        sx={{ width: 160, height: 160 }}/>
+                        sx={{ textAlign: 'center', width: 160, height: 160 }}/>
+                        </Box>
                 </Item>
             </Grid>
             <Grid item xs={9}>
@@ -65,7 +73,21 @@ export default function ImageAvatars() {
                 </Item>
             </Grid>
             <Grid item xs={12}>
-                <Item>sdfsfsdfs</Item>    
+                <Item sx={{ boxShadow: 0 }}>
+                    <Box mr={2}
+                        sx={{
+                            display: 'flex',
+                            alignItems: 'flex-start',
+                            flexDirection: 'row',
+                            justifyContent: 'flex-end',
+                            }}>
+                        <Button style={{fontSize: '0.7rem', color: '#45D083' }} startIcon={<AddCommentRoundedIcon />}>Message</Button>
+                        <Button style={{fontSize: '0.7rem', color: '#45D083' }} startIcon={<FeaturedPlayListRoundedIcon />}>About</Button>
+                        <Button style={{fontSize: '0.7rem', color: '#45D083' }} startIcon={<BusinessCenterRoundedIcon />}>Coopertion</Button>
+                        <Button style={{fontSize: '0.7rem', color: '#45D083' }} startIcon={<BadgeRoundedIcon />}>Residents</Button>
+                        <Button style={{fontSize: '0.7rem', color: '#45D083' }} startIcon={<ScreenShareRoundedIcon />}>Share</Button>
+                    </Box> 
+                </Item>    
             </Grid>
         </Grid>
     </Box>
