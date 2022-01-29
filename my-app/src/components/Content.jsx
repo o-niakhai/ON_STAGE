@@ -12,7 +12,7 @@ const Item = styled(Paper)(({ theme }) => ({
   color: theme.palette.text.secondary,
 }));
 
-export default function CSSGrid() {
+export default function Content() {
   return (
     <Box sx={{ width: 1, mt: 2 }}>
       <Box display="grid" gridTemplateColumns="repeat(12, 1fr)" gap={2}>

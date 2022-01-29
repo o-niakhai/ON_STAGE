@@ -4,6 +4,7 @@ import Box from '@mui/material/Box';
 
 export default function ProfileAvatr() {
   return (
+    
         <Box m={2} >
             <Avatar 
                 alt="Remy Sharp"
