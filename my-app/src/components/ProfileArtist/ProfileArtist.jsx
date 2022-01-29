@@ -5,6 +5,7 @@ import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import ProfileAvatr  from './ProfileAvatar';
 import ProfileInfoArtist from './ProfileInfoArtist'
+import CooperationComponents from '../CooperationComponents/CooperationComponents'
 
 const Item = styled(Paper)(({ theme }) => ({
     ...theme.typography.body2,
@@ -29,6 +30,7 @@ export default function ProfileArtist() {
             </Grid>
             <Grid item xs={12}>
                 <Item sx={{ boxShadow: 1 }}>
+                    <CooperationComponents />
                 </Item>
             </Grid>
         </Grid>
