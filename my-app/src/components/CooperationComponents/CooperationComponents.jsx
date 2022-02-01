@@ -7,14 +7,13 @@ import Riders from '../CooperationComponents/Riders'
 
 const Item = styled(Paper)(({ theme }) => ({
   ...theme.typography.body2,
-  padding: theme.spacing(1),
+  padding: theme.spacing(),
   color: theme.palette.text.secondary,
 }));
 
 export default function CooperationComponents() {
   return (
-    <Box sx={{ width: '100%' }}>
-      <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
+      <Grid container rowSpacing={1} columnSpacing={1}>
         <Grid item xs={6}>
           <Item><Riders/></Item>
         </Grid>
@@ -22,6 +21,5 @@ export default function CooperationComponents() {
           <Item>Feedbacks</Item>
         </Grid>
       </Grid>
-    </Box>
   );
 }
