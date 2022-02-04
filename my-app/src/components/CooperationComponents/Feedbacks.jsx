@@ -3,6 +3,7 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
 import RatingArtist from './RatingArtist';
+import RecallAboutArtist from './RecallAboutArtist';
 
 
 export default function Feedbacks() {
@@ -11,7 +12,7 @@ export default function Feedbacks() {
             <Typography variant="h5" textAlign="left">Feedbacks</Typography>
             <Grid container columns
                 sx={{ gridTemplateColumns: 'repeat(2, 1fr)' }}>
-                <Grid
+                <Grid 
                     style={{ width: '100%' }}
                     sx={{
                         boxShadow: 0,
@@ -47,7 +48,7 @@ export default function Feedbacks() {
                             p: 1
                         }}>
                         <Typography>
-                        "I have never been to a concert like that before, ... in my life.  That wasn't a concert, that was a service!!! ... The presence of the Lord was there!"
+                            <RecallAboutArtist/>
                         </Typography>
                     </Box>
                 </Grid>
