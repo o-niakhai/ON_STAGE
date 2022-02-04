@@ -1,5 +1,5 @@
 import React from 'react';
-import ResponsiveAppBar from './components/Header';
+import Header from './components/Header';
 import Content from '../src/components/Content'
 import './App.css';
 
@@ -7,7 +7,7 @@ import './App.css';
 const App = () => {
   return (
     <div >
-      <ResponsiveAppBar />
+      <Header />
       <Content />
     </div>
   );

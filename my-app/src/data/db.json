@@ -1,2 +1,22 @@
- 
- 
+{
+    "notes": [
+        {
+            "title": "Yshi-hueshititletitletitletitletitle",
+            "details": "detailsdetailsdetailsdetailsdetailsdetails",
+            "category": "reminders",
+            "id": 1
+        },
+        {
+            "title": "Yshi-title2",
+            "details": "details2",
+            "category": "wwork",
+            "id": 2
+        },
+        {
+            "title": "Yshi-title3",
+            "details": "details3",
+            "category": "todos",
+            "id": 3
+        }
+    ]
+}

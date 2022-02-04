@@ -2,48 +2,52 @@ import * as React from 'react';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
-import LocalActivityIcon from '@mui/icons-material/LocalActivity';
-import KingBedIcon from '@mui/icons-material/KingBed';
+import RatingArtist from './RatingArtist';
 
-export default function Riders() {
+
+export default function Feedbacks() {
     return (
         <Box>
-            <Typography variant="h5" textAlign="left">Rider</Typography>
-            <Grid container columnSpacing={1}
+            <Typography variant="h5" textAlign="left">Feedbacks</Typography>
+            <Grid container columns
                 sx={{ gridTemplateColumns: 'repeat(2, 1fr)' }}>
-                <Grid item  xl={6} md={6} sm={12} xs={12}
+                <Grid
+                    style={{ width: '100%' }}
                     sx={{
-                        boxShadow: 2,
+                        boxShadow: 0,
                         p: 1,
                     }}>
                     <Box
+                        sx={{ 
+                            display: 'flex', 
+                            justifyContent: 'space-between' 
+                        }}
                         style={{
-                            backgroundColor: '#F5F6FA',
                             width: '170',
                             height: '170',
                             p: 1
                         }}>
-                        <LocalActivityIcon sx={{ fontSize: 120 }} />
                         <Typography>
-                            Concert Rider
+                            Calvin Johnes
+                        </Typography>
+                        <Typography>
+                            <RatingArtist />
                         </Typography>
                     </Box>
                 </Grid>
-                <Grid item  xl={6} md={6} sm={12} xs={12}
+                <Grid item xl={6} md={6} sm={12} xs={12}
                     sx={{
-                        boxShadow: 2,
+                        boxShadow: 0,
                         p: 1,
                     }}>
                     <Box
                         style={{
-                            backgroundColor: '#F5F6FA',
                             width: '170',
                             height: '170',
                             p: 1
                         }}>
-                        <KingBedIcon sx={{ fontSize: 120 }} />
                         <Typography>
-                            Accommodation
+                        "I have never been to a concert like that before, ... in my life.  That wasn't a concert, that was a service!!! ... The presence of the Lord was there!"
                         </Typography>
                     </Box>
                 </Grid>

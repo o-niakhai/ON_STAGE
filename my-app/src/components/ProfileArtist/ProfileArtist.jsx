@@ -17,7 +17,7 @@ const Item = styled(Paper)(({ theme }) => ({
 export default function ProfileArtist() {
   return (
     <Box sx={{ flexGrow: 1 }}>
-        <Grid container spacing={2} columns={12}>
+        <Grid container spacing={2} columns={12} sx={{ boxShadow: 0 }}>
             <Grid item xs={3}>
                 <Item sx={{ boxShadow: 0 }}>
                     <ProfileAvatr />
@@ -29,7 +29,7 @@ export default function ProfileArtist() {
                 </Item>
             </Grid>
             <Grid item xs={12}>
-                <Item sx={{ boxShadow: 1 }}>
+                <Item sx={{ boxShadow: 0 }}>
                     <CooperationComponents />
                 </Item>
             </Grid>
