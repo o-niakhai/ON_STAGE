@@ -2,7 +2,9 @@ import * as React from 'react';
 import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
-import ProfileArtist from './ProfileArtist/ProfileArtist'
+import ProfileArtist from './ProfileArtist/ProfileArtist';
+import SideBar from './Sidebar/SideBar';
+
 
 
 const Item = styled(Paper)(({ theme }) => ({
@@ -23,7 +25,7 @@ export default function Content() {
         </Box>
         <Box gridColumn="span 4">
           <Item>
-            blabla
+            <SideBar />
           </Item>
         </Box>
         <Box gridColumn="span 8">
