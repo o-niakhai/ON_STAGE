@@ -1,14 +1,13 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import Link from '@mui/material/Link';
-import { Typography } from '@mui/material';
 
 const preventDefault = (event) => event.preventDefault();
 const tags = ["electro", "experimental", "techno", "technopop", "synthesizer", "synthpop", "krautrock", "germany", "synthmusic", "florianschneider", "smusic"];
 
 export default function ArtistTags() {
     return (
-        <Box
+        <Box 
             sx={{
                 typography: 'body1',
                 '& > :not(style) + :not(style)': {
@@ -17,15 +16,16 @@ export default function ArtistTags() {
             }}
             onClick={preventDefault}>
             {tags.map((tags) => (
-                <Typography textAlign="left">
+                <Box textAlign="left"
+                sx={{ 
+                    display: 'inline-flex'}}
+                        style={{
+                            backgroundColor: '#fff',}}>
                     <Link href="#" color="inherit" variant="body2" >
                         {tags}
                     </Link>
-                </Typography>
+                </Box>
             ))}
-
-
-
         </Box>
     );
 }
