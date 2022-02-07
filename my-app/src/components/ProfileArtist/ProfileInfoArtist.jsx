@@ -68,7 +68,7 @@ export default function ProfileInfoArtist() {
                 }}>
                 <LocationOnOutlinedIcon 
                     sx={{ color: '#45D083' }}/> 
-                        Berlin, Germany
+                        Düsseldorf, Germany
             </Typography>
             <Box>
                 <ProfileArtistActions />

@@ -29,7 +29,7 @@ export default function ProfileArtist() {
                 </Item>
             </Grid>
             <Grid item xs={12}>
-                <Item sx={{ boxShadow: 0 }} >
+                <Item sx={{ boxShadow: 0 }}>
                     <Cooperation />
                 </Item>
             </Grid>

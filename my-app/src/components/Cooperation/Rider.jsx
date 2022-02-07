@@ -10,6 +10,7 @@ export default function Rider() {
                 backgroundColor: '#F5F6FA',
                 boxShadow: 2,
                 p: 1,
+                borderRadius: 2
             }}>
             <LocalActivityIcon sx={{ fontSize: 120 }} />
             <Typography>

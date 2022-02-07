@@ -10,6 +10,7 @@ export default function Accommodation() {
                 backgroundColor: '#F5F6FA',
                 boxShadow: 2,
                 p: 1,
+                borderRadius: 2
             }}>
             <KingBedIcon sx={{ fontSize: 120 }} />
             <Typography>
