@@ -5,11 +5,11 @@ import LocalActivityIcon from '@mui/icons-material/LocalActivity';
 
 export default function Rider() {
     return (
-        <Grid container
+        <Grid 
             sx={{
                 backgroundColor: '#F5F6FA',
                 boxShadow: 2,
-                p: 0,
+                p: 1,
             }}>
             <LocalActivityIcon sx={{ fontSize: 120 }} />
             <Typography>
