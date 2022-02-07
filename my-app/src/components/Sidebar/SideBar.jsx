@@ -17,7 +17,7 @@ export default function SideBar() {
           <ArtistTags />
         </Grid>
         <Grid item xs={12}>
-          <Typography  variant="h6" textAlign="left">
+          <Typography variant="h6" textAlign="left">
             Music
           </Typography>
           <ArtistPlayer />
