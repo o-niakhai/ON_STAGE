@@ -9,13 +9,14 @@ export default function Benefits() {
             sx={{
                 backgroundColor: '#F5F6FA',
                 boxShadow: 2,
-                p: 1,
-                borderRadius: 2
+                borderRadius: 2,
+                width: 170,
+                height: 140
             }}>
-                <FastfoodIcon sx={{ fontSize: 100 }} />
-                <Typography>
+            <FastfoodIcon sx={{ fontSize: 50 }} />
+            <Typography>
                 Benefits
-                </Typography>
+            </Typography>
         </Grid>
     );
 }

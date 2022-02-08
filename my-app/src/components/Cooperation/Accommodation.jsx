@@ -9,10 +9,11 @@ export default function Accommodation() {
             sx={{
                 backgroundColor: '#F5F6FA',
                 boxShadow: 2,
-                p: 1,
-                borderRadius: 2
+                borderRadius: 2,
+                width: 170,
+                height: 140
             }}>
-            <KingBedIcon sx={{ fontSize: 120 }} />
+            <KingBedIcon sx={{ fontSize: 50 }} />
             <Typography>
                 Accommodation
             </Typography>

@@ -7,7 +7,7 @@ import Benefits from './Benefits'
 
 export default function CooperationComponents() {
   return (
-    <Grid display="grid" gridTemplateColumns="repeat(4, 1fr)" columnSpacing='1' >
+    <Grid display="grid" gridTemplateColumns="repeat(4, 1fr)" columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
       <Rider />
       <Accommodation />
       <Equipment />
