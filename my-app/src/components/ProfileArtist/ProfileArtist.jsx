@@ -4,8 +4,9 @@ import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import ProfileAvatr  from './ProfileAvatar';
-import ProfileInfoArtist from './ProfileInfoArtist'
-import Cooperation from '../Cooperation/Cooperation'
+import ProfileInfoArtist from './ProfileInfoArtist';
+//import Cooperation from '../Cooperation/Cooperation';
+import About from './About/About';
 
 const Item = styled(Paper)(({ theme }) => ({
     ...theme.typography.body2,
@@ -16,7 +17,10 @@ const Item = styled(Paper)(({ theme }) => ({
 
 export default function ProfileArtist() {
   return (
-    <Box sx={{ flexGrow: 1 }}>
+    <Box sx={{ 
+        display: 'flex',
+        flexGrow: 1 ,
+        }}>
         <Grid container spacing={2} columns={12} sx={{ boxShadow: 0 }}>
             <Grid item xs={3}>
                 <Item sx={{ boxShadow: 0 }}>
@@ -30,7 +34,7 @@ export default function ProfileArtist() {
             </Grid>
             <Grid item xs={12}>
                 <Item sx={{ boxShadow: 0 }}>
-                    <Cooperation />
+                    <About />
                 </Item>
             </Grid>
         </Grid>
