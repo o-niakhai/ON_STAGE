@@ -17,7 +17,7 @@ const Item = styled(Paper)(({ theme }) => ({
 export default function Content() {
   return (
     <Box sx={{ width: 1, mt: 2 }}>
-      <Box display="grid" gridTemplateColumns="repeat(12, 1fr)" gap={0}>
+      <Box display="grid" gridTemplateColumns="repeat(12, 1fr)" gap={1}>
         <Box gridColumn="span 8">
           <Item>
             <ProfileArtist />
