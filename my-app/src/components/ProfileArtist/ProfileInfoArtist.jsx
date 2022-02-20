@@ -4,7 +4,6 @@ import Typography from '@mui/material/Typography';
 import Link from '@mui/material/Link';
 import Button from '@mui/material/Button';
 import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined';
-import ProfileArtistActions from  './ProfileArtistActions'
 
 export default function ProfileInfoArtist() {
   return (
@@ -70,9 +69,6 @@ export default function ProfileInfoArtist() {
                     sx={{ color: '#45D083' }}/> 
                         Düsseldorf, Germany
             </Typography>
-            <Box>
-                <ProfileArtistActions />
-            </Box>
     </Box>
   );
 }

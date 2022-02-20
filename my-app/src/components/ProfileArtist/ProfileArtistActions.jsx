@@ -17,8 +17,8 @@ export default function ProfileArtistActions() {
     };
     return (
         <div>
-            <Box the 
-            mr={2}
+            <Box
+                mr={2}
                 sx={{
                     display: 'flex',
                     justifyContent: 'flex-end'
@@ -26,19 +26,19 @@ export default function ProfileArtistActions() {
                 <Tabs
                     TabIndicatorProps={{
                         sx: {
-                          bgcolor: "#45D083",
-                          height: "2px"
+                            bgcolor: "#45D083",
+                            height: "2px"
                         }
-                      }}
+                    }}
                     value={value}
                     onChange={handleChange}
                     indicatorColor="secondary"
                     sx={{ height: '10%' }}>
-                        <Tab style={{ fontSize: '0.7rem', color: '#949494' }} icon={<FeaturedPlayListRoundedIcon />} iconPosition="start" value="About" label="About"/>
-                        <Tab style={{ fontSize: '0.7rem', color: '#949494' }} icon={<AddCommentRoundedIcon />} iconPosition="start" value="Message" label="Message"/>
-                        <Tab style={{ fontSize: '0.7rem', color: '#949494' }} icon={<BusinessCenterRoundedIcon />} iconPosition="start" value="Cooperation" label="Cooperation"/>
-                        <Tab style={{ fontSize: '0.7rem', color: '#949494' }} icon={<BadgeRoundedIcon />} iconPosition="start" value="Residents" label="Residents"/>
-                        <Tab style={{ fontSize: '0.7rem', color: '#949494' }} icon={<ScreenShareRoundedIcon />} iconPosition="start" value="Share" label="Share"/>
+                    <Tab style={{ fontSize: '0.7rem', color: '#949494' }} icon={<FeaturedPlayListRoundedIcon />} iconPosition="start" value="About" label="About" />
+                    <Tab style={{ fontSize: '0.7rem', color: '#949494' }} icon={<AddCommentRoundedIcon />} iconPosition="start" value="Message" label="Message" />
+                    <Tab style={{ fontSize: '0.7rem', color: '#949494' }} icon={<BusinessCenterRoundedIcon />} iconPosition="start" value="Cooperation" label="Cooperation" />
+                    <Tab style={{ fontSize: '0.7rem', color: '#949494' }} icon={<BadgeRoundedIcon />} iconPosition="start" value="Residents" label="Residents" />
+                    <Tab style={{ fontSize: '0.7rem', color: '#949494' }} icon={<ScreenShareRoundedIcon />} iconPosition="start" value="Share" label="Share" />
                 </Tabs>
             </Box>
         </div>

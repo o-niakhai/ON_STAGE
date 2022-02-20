@@ -1,6 +1,5 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
 import Club1 from '../../../Media/Club1.jpg'
 import Club2 from '../../../Media/Club2.jpg'
 import Club3 from '../../../Media/Club3.jpg'
@@ -10,9 +9,6 @@ import Club3 from '../../../Media/Club3.jpg'
 export default function Residents() {
   return (
     <Box>
-      <Typography variant="h5" textAlign="left">
-        Residents
-        </Typography>
       <Box
         sx={{
           display: 'flex',
