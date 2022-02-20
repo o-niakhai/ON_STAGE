@@ -24,19 +24,36 @@ export default function ProfileArtistTabs() {
     return (
         <Box sx={{ width: '100%', typography: 'body1' }}>
             <TabContext value={value}>
-                <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-                    <TabList onChange={handleChange} aria-label="lab API tabs example">
-                        <Tab style={{ fontSize: '0.7rem', color: '#949494' }} icon={<FeaturedPlayListRoundedIcon />} iconPosition="start" value="About" label="About" />
-                        <Tab style={{ fontSize: '0.7rem', color: '#949494' }} icon={<AddCommentRoundedIcon />} iconPosition="start" value="Message" label="Message" />
-                        <Tab style={{ fontSize: '0.7rem', color: '#949494' }} icon={<BusinessCenterRoundedIcon />} iconPosition="start" value="Cooperation" label="Cooperation" />
-                        <Tab style={{ fontSize: '0.7rem', color: '#949494' }} icon={<BadgeRoundedIcon />} iconPosition="start" value="Residents" label="Residents" />
-                        <Tab style={{ fontSize: '0.7rem', color: '#949494' }} icon={<ScreenShareRoundedIcon />} iconPosition="start" value="Share" label="Share" />
+                <Box mr={2}
+                    sx={{
+                        display: 'flex',
+                        justifyContent: 'flex-end'
+                    }}>
+                    <TabList
+                        onChange={handleChange}
+                        aria-label="lab API tabs example"
+                        TabIndicatorProps={{
+                            sx: {
+                                bgcolor: "#45D083",
+                                height: "2px"
+                            }
+                        }}>
+                        <Tab style={{ fontSize: '0.7rem', color: '#949494' }}
+                            icon={<FeaturedPlayListRoundedIcon />} iconPosition="start" value="About" label="About" />
+                        <Tab style={{ fontSize: '0.7rem', color: '#949494' }}
+                            icon={<AddCommentRoundedIcon />} iconPosition="start" value="Message" label="Message" />
+                        <Tab style={{ fontSize: '0.7rem', color: '#949494' }}
+                            icon={<BusinessCenterRoundedIcon />} iconPosition="start" value="Cooperation" label="Cooperation" />
+                        <Tab style={{ fontSize: '0.7rem', color: '#949494' }}
+                            icon={<BadgeRoundedIcon />} iconPosition="start" value="Residents" label="Residents" />
+                        <Tab style={{ fontSize: '0.7rem', color: '#949494' }}
+                            icon={<ScreenShareRoundedIcon />} iconPosition="start" value="Share" label="Share" />
                     </TabList>
                 </Box>
-                <TabPanel value="About"><About/></TabPanel>
-                <TabPanel value="Message"><Message/></TabPanel>
-                <TabPanel value="Cooperation"><Cooperation/></TabPanel>
-                <TabPanel value="Residents"><Residents/></TabPanel>
+                <TabPanel value="About"><About /></TabPanel>
+                <TabPanel value="Message"><Message /></TabPanel>
+                <TabPanel value="Cooperation"><Cooperation /></TabPanel>
+                <TabPanel value="Residents"><Residents /></TabPanel>
                 <TabPanel value="Share">Share</TabPanel>
             </TabContext>
         </Box>

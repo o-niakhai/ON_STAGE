@@ -7,7 +7,6 @@ import ProfileAvatr from './ProfileAvatar';
 import ProfileInfoArtist from './ProfileInfoArtist';
 import ProfileArtistTabs from './ProfileArtistTabs';
 
-
 const Item = styled(Paper)(({ theme }) => ({
     ...theme.typography.body2,
     padding: theme.spacing(),
