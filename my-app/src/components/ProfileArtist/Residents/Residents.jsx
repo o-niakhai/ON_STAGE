@@ -1,7 +1,10 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
-import Image from 'mui-image'
+import Club1 from '../../../Media/Club1.jpeg'
+import Club2 from '../../../Media/Club2.jpeg'
+import Club3 from '../../../Media/Club3.jpeg'
+
 
 
 export default function Residents() {
@@ -16,9 +19,9 @@ export default function Residents() {
             flexDirection: 'row',
             p: 1,
             m: 1}}>
-          <Image src='../../../Media/Club1.jpeg' />
-          <Image src='../../../Media/Club2.jpeg' />
-          <Image src='../../../Media/Club3.jpeg' />
+          <img src={Club1} />;
+          <img src={Club2} />;
+          <img src={Club3} />
         </Box>
     </Box>
   );
