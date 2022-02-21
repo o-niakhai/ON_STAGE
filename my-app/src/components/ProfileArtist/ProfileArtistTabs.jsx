@@ -92,6 +92,13 @@ export default function BasicTabs() {
                         iconPosition="start"
                         value="Residents"
                     />
+                    <Tab
+                        label="Share" {...a11yProps(4)}
+                        style={{ fontSize: '0.7rem', color: '#949494' }}
+                        icon={<ScreenShareRoundedIcon />}
+                        iconPosition="start"
+                        value="Share"
+                    />
                 </Tabs>
             </Box>
             <TabPanel value={About} index={0}>
@@ -104,6 +111,9 @@ export default function BasicTabs() {
                 <Cooperation />
             </TabPanel>
             <TabPanel value={Residents} index={3}>
+                <Cooperation />
+            </TabPanel>
+            <TabPanel value={Residents} index={4}>
                 <Cooperation />
             </TabPanel>
         </Box>

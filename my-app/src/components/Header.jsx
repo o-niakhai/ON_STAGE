@@ -11,6 +11,7 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
+import { FormatColorText } from '@mui/icons-material';
 
 const pages = ['Inbox', 'Following', 'Calendar'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
@@ -35,7 +36,10 @@ const Header = () => {
   };
 
   return (
-    <AppBar position="static" style={{ background: '#fff' }}>
+    <AppBar position="static" 
+    style={{ 
+      background: '#fff'
+      }}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Typography
@@ -59,7 +63,11 @@ const Header = () => {
 
           </Typography>
 
-          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+          <Box
+            sx={{
+              flexGrow: 1,
+              display: { xs: 'flex', md: 'none' }
+            }}>
             <IconButton
               size="large"
               aria-label="account of current user"
@@ -119,7 +127,7 @@ const Header = () => {
               <Button
                 key={page}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
+                sx={{ my: 2, color: 'black', display: 'block' }}
               >
                 {page}
               </Button>
