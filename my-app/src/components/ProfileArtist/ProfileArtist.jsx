@@ -27,7 +27,7 @@ export default function ProfileArtist() {
                     </Item>
                 </Grid>
                 <Grid item xs={9}>
-                    <Item sx={{ boxShadow: 0, height: 192 }}>
+                    <Item sx={{ boxShadow: 0 }}>
                         <ProfileInfoArtist />
                     </Item>
                 </Grid>
