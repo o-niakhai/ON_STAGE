@@ -23,8 +23,7 @@ function TabPanel(props) {
             hidden={value !== index}
             id={`simple-tabpanel-${index}`}
             aria-labelledby={`simple-tab-${index}`}
-            {...other}
-        >
+            {...other}>
             {value === index && (
                 <Box sx={{ p: 3 }}>
                     <Typography>{children}</Typography>
@@ -102,19 +101,19 @@ export default function BasicTabs() {
                 </Tabs>
             </Box>
             <TabPanel value={About} index={0}>
-                <About />
+                <Route component={About} />
             </TabPanel>
             <TabPanel value={Message} index={1}>
                 <Message />
             </TabPanel>
             <TabPanel value={Cooperation} index={2}>
-                <Cooperation />
+                <Route component={Cooperation} />
             </TabPanel>
             <TabPanel value={Residents} index={3}>
-                <Cooperation />
+                <Route component={Cooperation} />
             </TabPanel>
             <TabPanel value={Residents} index={4}>
-                <Cooperation />
+                <Route component={Cooperation} />
             </TabPanel>
         </Box>
     );
