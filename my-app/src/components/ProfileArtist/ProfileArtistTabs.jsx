@@ -104,7 +104,7 @@ export default function BasicTabs() {
                 <Route component={About} />
             </TabPanel>
             <TabPanel value={Message} index={1}>
-                <Message />
+                <Route component={Message} />
             </TabPanel>
             <TabPanel value={Cooperation} index={2}>
                 <Route component={Cooperation} />
