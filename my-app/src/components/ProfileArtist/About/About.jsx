@@ -5,7 +5,7 @@ import Feedbacks from './Feedbacks';
 import AboutArtist from './AboutArtist';
 //import { NavLink } from '.react-router-dom';
 
-export default function About() {
+export default function About(props) {
     return (
         <Box>
             <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>

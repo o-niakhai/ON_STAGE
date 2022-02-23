@@ -56,17 +56,7 @@ function a11yProps(index) {
         'aria-controls': `simple-tabpanel-${index}`,
     };
 }
-function LinkTab(props) {
-    return (
-      <Tab
-        component="a"
-        onClick={(event) => {
-          event.preventDefault();
-        }}
-        {...props}
-      />
-    );
-  }
+
 
 export default function BasicTabs(props) {
     const [value, setValue] = React.useState(0);
@@ -87,6 +77,7 @@ export default function BasicTabs(props) {
                         }
                     }}>
                     <Tab 
+                        
                         label="About" {...a11yProps(0)}
                         style={{ fontSize: '0.7rem', color: '#949494' }}
                         icon={<FeaturedPlayListRoundedIcon />}
@@ -123,23 +114,21 @@ export default function BasicTabs(props) {
                     />
                 </Tabs>
             </Box>
-            <BrowserRouter>
-                <TabPanel value={About} index={0}>
-                    <LinkTab href='/about' component={About}/>
+                <TabPanel component={About}>
+                    <About/>
                 </TabPanel>
-                <TabPanel value={Message} index={1}>
-                    <Message />
+                <TabPanel  component={Message}>
+                    <Message/>
                 </TabPanel>
-                <TabPanel value={Cooperation} index={2}>
+                <TabPanel component={Cooperation}>
                     <Cooperation />
                 </TabPanel>
-                <TabPanel value={Residents} index={3}>
-                    <Cooperation />
+                <TabPanel component={Residents}>
+                    <Residents />
                 </TabPanel>
-                <TabPanel value={Residents} index={4}>
-                    <Cooperation />
+                <TabPanel component={Residents}>
+                    <Residents />
                 </TabPanel>
-            </BrowserRouter>
         </Box>
     );
 }
