@@ -3,6 +3,7 @@ import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Feedbacks from './Feedbacks';
 import AboutArtist from './AboutArtist';
+//import { NavLink } from '.react-router-dom';
 
 export default function About() {
     return (

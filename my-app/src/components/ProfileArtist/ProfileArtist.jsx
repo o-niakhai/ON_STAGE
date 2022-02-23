@@ -33,7 +33,7 @@ export default function ProfileArtist() {
                 </Grid>
                 <Grid item xs={12}>
                     <Item sx={{ boxShadow: 0 }}>
-                        <ProfileArtistTabs />
+                        <ProfileArtistTabs/>
                     </Item>
                 </Grid>
             </Grid>

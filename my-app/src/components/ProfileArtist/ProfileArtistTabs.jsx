@@ -13,6 +13,17 @@ import About from './About/About';
 import Message from './Message/Message';
 import Cooperation from './Cooperation/Cooperation';
 import Residents from './Residents/Residents';
+import { StaticRouter } from 'react-router-dom/server';
+import {
+    Router,
+    MemoryRouter,
+    Route,
+    Routes,
+    BrowserRouter,
+    Link,
+    matchPath,
+    useLocation,
+} from 'react-router-dom';
 
 
 function TabPanel(props) {
@@ -45,8 +56,19 @@ function a11yProps(index) {
         'aria-controls': `simple-tabpanel-${index}`,
     };
 }
+function LinkTab(props) {
+    return (
+      <Tab
+        component="a"
+        onClick={(event) => {
+          event.preventDefault();
+        }}
+        {...props}
+      />
+    );
+  }
 
-export default function BasicTabs() {
+export default function BasicTabs(props) {
     const [value, setValue] = React.useState(0);
 
     const handleChange = (event, newValue) => {
@@ -56,6 +78,7 @@ export default function BasicTabs() {
     return (
         <Box sx={{ width: '100%' }}>
             <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
+                
                 <Tabs value={value} onChange={handleChange}
                     TabIndicatorProps={{
                         sx: {
@@ -63,35 +86,35 @@ export default function BasicTabs() {
                             height: "2px"
                         }
                     }}>
-                    <Tab
+                    <Tab 
                         label="About" {...a11yProps(0)}
                         style={{ fontSize: '0.7rem', color: '#949494' }}
                         icon={<FeaturedPlayListRoundedIcon />}
                         iconPosition="start"
                         value="About"
                     />
-                    <Tab
+                    <Tab 
                         label="Message" {...a11yProps(1)}
                         style={{ fontSize: '0.7rem', color: '#949494' }}
                         icon={<AddCommentRoundedIcon />}
                         iconPosition="start"
                         value="Message"
                     />
-                    <Tab
+                    <Tab 
                         label="Cooperation" {...a11yProps(2)}
                         style={{ fontSize: '0.7rem', color: '#949494' }}
                         icon={<BusinessCenterRoundedIcon />}
                         iconPosition="start"
                         value="Cooperation"
                     />
-                    <Tab
+                    <Tab 
                         label="Residents" {...a11yProps(3)}
                         style={{ fontSize: '0.7rem', color: '#949494' }}
                         icon={<BadgeRoundedIcon />}
                         iconPosition="start"
                         value="Residents"
                     />
-                    <Tab
+                    <Tab 
                         label="Share" {...a11yProps(4)}
                         style={{ fontSize: '0.7rem', color: '#949494' }}
                         icon={<ScreenShareRoundedIcon />}
@@ -100,21 +123,23 @@ export default function BasicTabs() {
                     />
                 </Tabs>
             </Box>
-            <TabPanel value={About} index={0}>
-                <Route component={About} />
-            </TabPanel>
-            <TabPanel value={Message} index={1}>
-                <Route component={Message} />
-            </TabPanel>
-            <TabPanel value={Cooperation} index={2}>
-                <Route component={Cooperation} />
-            </TabPanel>
-            <TabPanel value={Residents} index={3}>
-                <Route component={Cooperation} />
-            </TabPanel>
-            <TabPanel value={Residents} index={4}>
-                <Route component={Cooperation} />
-            </TabPanel>
+            <BrowserRouter>
+                <TabPanel value={About} index={0}>
+                    <LinkTab href='/about' component={About}/>
+                </TabPanel>
+                <TabPanel value={Message} index={1}>
+                    <Message />
+                </TabPanel>
+                <TabPanel value={Cooperation} index={2}>
+                    <Cooperation />
+                </TabPanel>
+                <TabPanel value={Residents} index={3}>
+                    <Cooperation />
+                </TabPanel>
+                <TabPanel value={Residents} index={4}>
+                    <Cooperation />
+                </TabPanel>
+            </BrowserRouter>
         </Box>
     );
 }

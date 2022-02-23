@@ -9,7 +9,7 @@ import Club3 from '../../../Media/Club3.jpg'
 export default function Residents() {
   return (
     <Box>
-      <Box
+      <Box 
         sx={{
           display: 'flex',
           flexDirection: 'row',
