@@ -6,6 +6,11 @@ import Grid from '@mui/material/Grid';
 import ProfileAvatr from './ProfileAvatar';
 import ProfileInfoArtist from './ProfileInfoArtist';
 import ProfileArtistTabs from './ProfileArtistTabs';
+import About from './About/About';
+import Message from './Message/Message';
+import Cooperation from './Cooperation/Cooperation';
+import Residents from './Residents/Residents';
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 const Item = styled(Paper)(({ theme }) => ({
     ...theme.typography.body2,
@@ -33,7 +38,17 @@ export default function ProfileArtist() {
                 </Grid>
                 <Grid item xs={12}>
                     <Item sx={{ boxShadow: 0 }}>
-                        <ProfileArtistTabs/>
+                        <Router>
+                            <div>
+                                <ProfileArtistTabs />
+                                <Routes>
+                                    <Route path="/about" element={<About />} />
+                                    <Route path="/cooperation" element={<Cooperation />} />
+                                    <Route path="/message" element={<Message />} />
+                                    <Route path="/residents" element={<Residents />} />
+                                </Routes>
+                            </div>
+                        </Router>
                     </Item>
                 </Grid>
             </Grid>

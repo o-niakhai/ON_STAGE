@@ -13,7 +13,7 @@ import About from './About/About';
 import Message from './Message/Message';
 import Cooperation from './Cooperation/Cooperation';
 import Residents from './Residents/Residents';
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 
 function TabPanel(props) {
@@ -46,7 +46,7 @@ function a11yProps(index) {
         'aria-controls': `simple-tabpanel-${index}`,
     };
 }
-export default function BasicTabs(props) {
+export default function BasicTabs() {
     const [value, setValue] = React.useState(0);
 
     const handleChange = (event, newValue) => {
@@ -64,13 +64,15 @@ export default function BasicTabs(props) {
                         }
                     }}>
                     <Tab
-                        label="About"
+                        to="/about"
+                        label="About" {...a11yProps(0)}
                         style={{ fontSize: '0.7rem', color: '#949494' }}
                         icon={<FeaturedPlayListRoundedIcon />}
                         iconPosition="start"
                         value="About"
                     />
                     <Tab
+                        to="/message"
                         label="Message" {...a11yProps(1)}
                         style={{ fontSize: '0.7rem', color: '#949494' }}
                         icon={<AddCommentRoundedIcon />}
@@ -100,25 +102,22 @@ export default function BasicTabs(props) {
                     />
                 </Tabs>
             </Box>
-            <Router>
-                <Switch>
-                    <TabPanel>
-                        <Route path="/about" exact element={<About />} />
-                    </TabPanel>
-                    <TabPanel>
-                        <Route path="/message" element={<Message />} />
-                    </TabPanel>
-                    <TabPanel>
-                        <Cooperation />
-                    </TabPanel>
-                    <TabPanel>
-                        <Residents />
-                    </TabPanel>
-                    <TabPanel>
-                        <Residents />
-                    </TabPanel>
-                </Switch>
-            </Router>
+            <Link to="/about">
+                <TabPanel>
+                    <About />
+                </TabPanel>
+            </Link>
+            <Link to="/message">
+                <TabPanel>
+                    <Message />
+                </TabPanel>
+            </Link>
+            <TabPanel>
+                <Cooperation />
+            </TabPanel>
+            <TabPanel>
+                <Residents />
+            </TabPanel>
         </Box>
     );
 }
