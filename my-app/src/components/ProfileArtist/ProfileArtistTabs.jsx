@@ -56,7 +56,7 @@ export default function BasicTabs() {
     return (
         <Box sx={{ width: '100%' }}>
             <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-                <Tabs value={value} onChange={handleChange}
+                <Tabs value={value} onChange={handleChange} aria-label="basic tabs example"
                     TabIndicatorProps={{
                         sx: {
                             bgcolor: "#45D083",
@@ -102,20 +102,16 @@ export default function BasicTabs() {
                     />
                 </Tabs>
             </Box>
-            <Link to="/about">
-                <TabPanel>
-                    <About />
-                </TabPanel>
-            </Link>
-            <Link to="/message">
-                <TabPanel>
-                    <Message />
-                </TabPanel>
-            </Link>
-            <TabPanel>
+            <TabPanel value={About} index={0}>
+                <About to="/about" />
+            </TabPanel>
+            <TabPanel value={Message} index={1}>
+                <Message to="/message" />
+            </TabPanel>
+            <TabPanel value={Cooperation} index={2}>
                 <Cooperation />
             </TabPanel>
-            <TabPanel>
+            <TabPanel value={Residents} index={3}>
                 <Residents />
             </TabPanel>
         </Box>
