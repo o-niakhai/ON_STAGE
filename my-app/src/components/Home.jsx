@@ -1,11 +1,11 @@
 import React from 'react';
 import Typography from '@mui/material/Typography';
 
-export default function Calendar()  {
+export default function Home()  {
   return (
     <div >
       <Typography>
-          Calendar
+          Home
       </Typography>
     </div>
   );

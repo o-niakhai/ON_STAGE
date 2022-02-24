@@ -1,7 +1,7 @@
 import React from 'react';
 import Typography from '@mui/material/Typography';
 
-const App = () => {
+export default function News() {
   return (
     <div >
       <Typography>
@@ -10,5 +10,3 @@ const App = () => {
     </div>
   );
 }
-
-export default App;
