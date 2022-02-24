@@ -4,7 +4,7 @@ const App = () => {
   return (
     <div >
       <Typography>
-          News
+          Calendar
       </Typography>
     </div>
   );
