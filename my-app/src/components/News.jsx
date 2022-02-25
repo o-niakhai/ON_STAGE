@@ -5,7 +5,7 @@ export default function News() {
   return (
     <div >
       <Typography>
-          News
+          News page
       </Typography>
     </div>
   );

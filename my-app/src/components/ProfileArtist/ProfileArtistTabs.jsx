@@ -13,7 +13,7 @@ import About from './About/About';
 import Message from './Message/Message';
 import Cooperation from './Cooperation/Cooperation';
 import Residents from './Residents/Residents';
-import { Link } from "react-router-dom";
+import { Routes, Route, Link } from "react-router-dom";
 
 
 function TabPanel(props) {
@@ -64,7 +64,7 @@ export default function BasicTabs() {
                         }
                     }}>
                     <Tab
-                        to="/about"
+                        to="/"
                         label="About" {...a11yProps(0)}
                         style={{ fontSize: '0.7rem', color: '#949494' }}
                         icon={<FeaturedPlayListRoundedIcon />}
@@ -102,11 +102,12 @@ export default function BasicTabs() {
                     />
                 </Tabs>
             </Box>
+            <Routes>
             <TabPanel value={About} index={0}>
-                <About to="/about" />
+                <Route path="/" element={<About/>}/>
             </TabPanel>
             <TabPanel value={Message} index={1}>
-                <Message to="/message" />
+                <Message />
             </TabPanel>
             <TabPanel value={Cooperation} index={2}>
                 <Cooperation />
@@ -114,6 +115,7 @@ export default function BasicTabs() {
             <TabPanel value={Residents} index={3}>
                 <Residents />
             </TabPanel>
+            </Routes>
         </Box>
     );
 }

@@ -5,7 +5,7 @@ export default function Calendar()  {
   return (
     <div >
       <Typography>
-          Calendar
+          Calendar page
       </Typography>
     </div>
   );

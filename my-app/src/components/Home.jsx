@@ -5,7 +5,7 @@ export default function Home()  {
   return (
     <div >
       <Typography>
-          Home
+          Home page
       </Typography>
     </div>
   );

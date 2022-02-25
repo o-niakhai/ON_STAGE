@@ -11,11 +11,12 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
+//import Home from '../components/Home';
 
-const pages = ['News', 'Frends', 'Calendar'];
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+const pages = ['Home', 'News', 'Frends', 'Calendar'];
+const settings = ['Home', 'News', 'Frends', 'Logout'];
 
-const Header = () => {
+export default function Header() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
@@ -59,9 +60,8 @@ const Header = () => {
                 <path id="Vector_8" d="M11.3697 3.46667H7.89087V12H11.3697V3.46667Z" fill="#61DC79" />
               </g>
             </svg>
-
+            
           </Typography>
-
           <Box
             sx={{
               flexGrow: 1,
@@ -73,8 +73,7 @@ const Header = () => {
               aria-controls="menu-appbar"
               aria-haspopup="true"
               onClick={handleOpenNavMenu}
-              sx={{ color: 'black' }}
-            >
+              sx={{ color: 'black' }}>
               <MenuIcon />
             </IconButton>
             <Menu
@@ -126,8 +125,7 @@ const Header = () => {
               <Button
                 key={page}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'black', display: 'block' }}
-              >
+                sx={{ my: 2, color: 'black', display: 'block' }}>
                 {page}
               </Button>
             ))}
@@ -167,4 +165,3 @@ const Header = () => {
     </AppBar>
   );
 };
-export default Header;
