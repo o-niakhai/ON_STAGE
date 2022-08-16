@@ -92,8 +92,7 @@ export default function Header() {
               onClose={handleCloseNavMenu}
               sx={{
                 display: { xs: 'block', md: 'none', color: 'black' },
-              }}
-            >
+              }}>
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
                   <Typography textAlign="center">{page}</Typography>
