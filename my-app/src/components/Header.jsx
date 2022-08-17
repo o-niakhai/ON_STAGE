@@ -60,7 +60,6 @@ export default function Header() {
                 <path id="Vector_8" d="M11.3697 3.46667H7.89087V12H11.3697V3.46667Z" fill="#61DC79" />
               </g>
             </svg>
-            
           </Typography>
           <Box
             sx={{
