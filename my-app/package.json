@@ -24,7 +24,7 @@
     "react-player": "^2.9.0",
     "react-router": "^6.0.0-beta.8",
     "react-router-dom": "^6.0.0-beta.8",
-    "react-scripts": "^5.0.0",
+    "react-scripts": "^2.1.3",
     "react-soundcloud-embedded": "^2.0.7",
     "react-soundcloud-widget": "^2.0.4",
     "react-soundplayer": "^1.0.5",
