@@ -34,7 +34,6 @@ export default function ContentArtist() {
         <Box gridColumn="span 4">
           <Item>xs=4</Item>
         </Box>
-
       </Box>
     </Box>
   );
