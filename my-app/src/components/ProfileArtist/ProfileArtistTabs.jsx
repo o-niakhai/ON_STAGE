@@ -13,7 +13,8 @@ import About from './About/About';
 import Message from './Message/Message';
 import Cooperation from './Cooperation/Cooperation';
 import Residents from './Residents/Residents';
-import { Routes, Route, Link } from "react-router-dom";
+import {  Switch, Route, HashRouter } from 'react-router-dom';
+
 
 
 function TabPanel(props) {
@@ -97,20 +98,26 @@ export default function BasicTabs() {
                         value="Share"/>
                 </Tabs>
             </Box>
-            <Routes>
-            <TabPanel value={About} index={0}>
-                <Route path="/" element={<About/>}/>
-            </TabPanel>
-            <TabPanel value={Message} index={1}>
-                <Message />
-            </TabPanel>
-            <TabPanel value={Cooperation} index={2}>
-                <Cooperation />
-            </TabPanel>
-            <TabPanel value={Residents} index={3}>
-                <Residents />
-            </TabPanel>
-            </Routes>
+            <HashRouter>
+                    <Switch>
+                        <Route exact path="/" component={About}/>
+                        <Route path="./Message/Message.jsx" component={Message}/>
+                        <Route path="./Cooperation/Cooperation.jsx" component={Cooperation}/>
+                        <Route path="./Residents/Residents.jsx" component={Residents}/>
+                    </Switch>
+                    {/* <TabPanel value={About} index={0}>
+                        <Route path="/" element={<About/>}/>
+                    </TabPanel>
+                    <TabPanel value={Message} index={1}>
+                        <Message />
+                    </TabPanel>
+                    <TabPanel value={Cooperation} index={2}>
+                        <Cooperation />
+                    </TabPanel>
+                    <TabPanel value={Residents} index={3}>
+                        <Residents />
+                    </TabPanel> */}
+            </HashRouter>
         </Box>
     );
 }
