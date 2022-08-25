@@ -98,12 +98,12 @@ export default function BasicTabs() {
                         value="Share"/>
                 </Tabs>
             </Box>
-                    <Routes>
-                    <Route path='./About/About.jsx' element={<About/>} />
-                    <Route path='./Message/Message.jsx' element={<Message/>} />
-                    <Route path='./Cooperation/Cooperation.jsx' element={<Cooperation/>} />
-                    <Route path='./Residents/Residents.jsx' element={<Residents/>} />
-                    </Routes>
+            <Routes>
+                <Route path='./About/About.jsx' element={<About/>} />
+                <Route path='./Message/Message.jsx' element={<Message/>} />
+                <Route path='./Cooperation/Cooperation.jsx' element={<Cooperation/>} />
+                <Route path='./Residents/Residents.jsx' element={<Residents/>} />
+            </Routes>
 
 
                     {/* <TabPanel value={About} index={0}>
