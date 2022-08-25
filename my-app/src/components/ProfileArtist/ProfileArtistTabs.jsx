@@ -8,12 +8,11 @@ import AddCommentRoundedIcon from '@mui/icons-material/AddCommentRounded';
 import FeaturedPlayListRoundedIcon from '@mui/icons-material/FeaturedPlayListRounded';
 import BusinessCenterRoundedIcon from '@mui/icons-material/BusinessCenterRounded';
 import BadgeRoundedIcon from '@mui/icons-material/BadgeRounded';
-import ScreenShareRoundedIcon from '@mui/icons-material/ScreenShareRounded';
 import About from './About/About';
 import Message from './Message/Message';
 import Cooperation from './Cooperation/Cooperation';
 import Residents from './Residents/Residents';
-import {  Routes, Route, HashRouter } from 'react-router-dom';
+import {  Routes, Route } from 'react-router-dom';
 
 
 
@@ -65,37 +64,39 @@ export default function BasicTabs() {
                         }
                     }}>
                     <Tab
-                        to="/About"
+                        to="./About/About.jsx"
                         label="About" {...a11yProps(0)}
                         style={{ fontSize: '0.7rem', color: '#949494' }}
                         icon={<FeaturedPlayListRoundedIcon />}
                         iconPosition="start"
                         value="About"/>
                     <Tab
-                        to="/message"
+                        to="./Message/Message.jsx"
                         label="Message" {...a11yProps(1)}
                         style={{ fontSize: '0.7rem', color: '#949494' }}
                         icon={<AddCommentRoundedIcon />}
                         iconPosition="start"
                         value="Message"/>
                     <Tab
+                        to="./Cooperation/Cooperation.jsx"
                         label="Cooperation" {...a11yProps(2)}
                         style={{ fontSize: '0.7rem', color: '#949494' }}
                         icon={<BusinessCenterRoundedIcon />}
                         iconPosition="start"
                         value="Cooperation"/>
                     <Tab
-                        label="Residents" {...a11yProps(3)}
+                        to="./Residents/Residents.jsx"
+                        label="./Residents/Residents.jsx" {...a11yProps(3)}
                         style={{ fontSize: '0.7rem', color: '#949494' }}
                         icon={<BadgeRoundedIcon />}
                         iconPosition="start"
                         value="Residents"/>
-                    <Tab
+                    {/* <Tab
                         label="Share" {...a11yProps(4)}
                         style={{ fontSize: '0.7rem', color: '#949494' }}
                         icon={<ScreenShareRoundedIcon />}
                         iconPosition="start"
-                        value="Share"/>
+                        value="Share"/> */}
                 </Tabs>
             </Box>
             <Routes>

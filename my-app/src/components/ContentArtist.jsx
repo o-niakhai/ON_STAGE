@@ -29,7 +29,9 @@ export default function ContentArtist() {
           </Item>
         </Box>
         <Box gridColumn="span 8">
-          <Item>xs=8</Item>
+          <Item>
+            
+          </Item>
         </Box>
         <Box gridColumn="span 4">
           <Item>xs=4</Item>
