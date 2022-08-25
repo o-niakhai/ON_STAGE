@@ -104,20 +104,6 @@ export default function BasicTabs() {
                 <Route path='./Cooperation/Cooperation.jsx' element={<Cooperation/>} />
                 <Route path='./Residents/Residents.jsx' element={<Residents/>} />
             </Routes>
-
-
-                    {/* <TabPanel value={About} index={0}>
-                        <Route path="/" element={<About/>}/>
-                    </TabPanel>
-                    <TabPanel value={Message} index={1}>
-                        <Message />
-                    </TabPanel>
-                    <TabPanel value={Cooperation} index={2}>
-                        <Cooperation />
-                    </TabPanel>
-                    <TabPanel value={Residents} index={3}>
-                        <Residents />
-                    </TabPanel> */}
         </Box>
     );
 }
