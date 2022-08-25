@@ -11,11 +11,16 @@ const App = () => {
   return (
     <div >
       <Header>
-        <a href="./components/ContentArtist.jsx">Home</a>
-        <a href="./components/News.jsx">News</a>
-        <a href="./components/Calendar.jsx">Calendar</a>
-        <a href="./components/">ContentArtist</a>
+        <a href="/home">Home</a>
+        <a href="/News">News</a>
+        <a href="/calendar">Calendar</a>
+        <a href="/components/">ContentArtist</a>
       </Header>
+      <Routes>
+        <Route path="./components/ContentArtist.jsx" element={<ContentArtist/>} />
+        <Route path="./components/News.jsx" element={<News/>} />
+        <Route path="./components/Calendar.jsx" element={<Calendar/>} />
+      </Routes>
     </div>
   );
 }
