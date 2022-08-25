@@ -98,18 +98,14 @@ export default function BasicTabs() {
                         value="Share"/>
                 </Tabs>
             </Box>
-            <HashRouter>
                     <Routes>
                     <Route path='./About/About.jsx' element={<About/>} />
                     <Route path='./Message/Message.jsx' element={<Message/>} />
                     <Route path='./Cooperation/Cooperation.jsx' element={<Cooperation/>} />
                     <Route path='./Residents/Residents.jsx' element={<Residents/>} />
-                        <Route exact path="/" component={About}/>
-                        <Route path="./Message/Message.jsx" component={Message}/>
-                        <Route path="./Cooperation/Cooperation.jsx" component={Cooperation}/>
-                        <Route path="./Residents/Residents.jsx" component={Residents}/>
                     </Routes>
-                    
+
+
                     {/* <TabPanel value={About} index={0}>
                         <Route path="/" element={<About/>}/>
                     </TabPanel>
@@ -122,7 +118,6 @@ export default function BasicTabs() {
                     <TabPanel value={Residents} index={3}>
                         <Residents />
                     </TabPanel> */}
-            </HashRouter>
         </Box>
     );
 }
