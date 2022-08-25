@@ -64,42 +64,37 @@ export default function BasicTabs() {
                         }
                     }}>
                     <Tab
-                        to="/"
+                        to="/About"
                         label="About" {...a11yProps(0)}
                         style={{ fontSize: '0.7rem', color: '#949494' }}
                         icon={<FeaturedPlayListRoundedIcon />}
                         iconPosition="start"
-                        value="About"
-                    />
+                        value="About"/>
                     <Tab
                         to="/message"
                         label="Message" {...a11yProps(1)}
                         style={{ fontSize: '0.7rem', color: '#949494' }}
                         icon={<AddCommentRoundedIcon />}
                         iconPosition="start"
-                        value="Message"
-                    />
+                        value="Message"/>
                     <Tab
                         label="Cooperation" {...a11yProps(2)}
                         style={{ fontSize: '0.7rem', color: '#949494' }}
                         icon={<BusinessCenterRoundedIcon />}
                         iconPosition="start"
-                        value="Cooperation"
-                    />
+                        value="Cooperation"/>
                     <Tab
                         label="Residents" {...a11yProps(3)}
                         style={{ fontSize: '0.7rem', color: '#949494' }}
                         icon={<BadgeRoundedIcon />}
                         iconPosition="start"
-                        value="Residents"
-                    />
+                        value="Residents"/>
                     <Tab
                         label="Share" {...a11yProps(4)}
                         style={{ fontSize: '0.7rem', color: '#949494' }}
                         icon={<ScreenShareRoundedIcon />}
                         iconPosition="start"
-                        value="Share"
-                    />
+                        value="Share"/>
                 </Tabs>
             </Box>
             <Routes>
