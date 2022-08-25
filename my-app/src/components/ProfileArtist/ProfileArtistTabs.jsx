@@ -13,7 +13,7 @@ import About from './About/About';
 import Message from './Message/Message';
 import Cooperation from './Cooperation/Cooperation';
 import Residents from './Residents/Residents';
-import {  Switch, Route, HashRouter } from 'react-router-dom';
+import {  Routes, Route, HashRouter } from 'react-router-dom';
 
 
 
@@ -99,12 +99,16 @@ export default function BasicTabs() {
                 </Tabs>
             </Box>
             <HashRouter>
-                    <Switch>
+                    <Routes>
+                    <Route path='./About/About.jsx' element={<About/>} />
+                    <Route path='./Message/Message.jsx' element={<Message/>} />
+                    <Route path='./Cooperation/Cooperation.jsx' element={<Cooperation/>} />
+                    <Route path='./Residents/Residents.jsx' element={<Residents/>} />
                         <Route exact path="/" component={About}/>
                         <Route path="./Message/Message.jsx" component={Message}/>
                         <Route path="./Cooperation/Cooperation.jsx" component={Cooperation}/>
                         <Route path="./Residents/Residents.jsx" component={Residents}/>
-                    </Switch>
+                    </Routes>
                     {/* <TabPanel value={About} index={0}>
                         <Route path="/" element={<About/>}/>
                     </TabPanel>
