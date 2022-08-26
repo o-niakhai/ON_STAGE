@@ -1,13 +1,17 @@
-import { Routes, Route, Link } from 'react-router';
+import { Routes, Route, Link, Outlet } from 'react-router';
 
 const Layout = () => {
     return (
-        <Header>
-            <a href="/home">Home</a>
-            <a href="/News">News</a>
-            <a href="/calendar">Calendar</a>
-            <a href="/components/">ContentArtist</a>
-        </Header>
+        <>
+            <header>
+                <Link to="/home">Home</Link>
+                <Link to="/News">News</Link>
+                <Link to="/calendar">Calendar</Link>
+                <Link to="/components/">ContentArtist</Link>
+            </header>
+            <Outlet/>
+            <footer>2022</footer>
+        </>
     )
 }
 export {Layout}

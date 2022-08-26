@@ -14,9 +14,10 @@ import MenuItem from '@mui/material/MenuItem';
 //import Home from '../components/Home';
 
 const pages = ['Home', 'News', 'Frends', 'Calendar'];
-const settings = ['Home', 'News', 'Frends', 'Logout'];
+const settings = ['Home', 'News', 'Frends', 'Calendar'];
 
 export default function Header() {
+  
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
@@ -36,6 +37,7 @@ export default function Header() {
   };
 
   return (
+    <>
     <AppBar position="static" 
     style={{ 
       background: '#fff'
@@ -46,8 +48,7 @@ export default function Header() {
             variant="h6"
             noWrap
             component="div"
-            sx={{ mr: 2, display: { xs: 'none', md: 'flex' } }}
-          >
+            sx={{ mr: 2, display: { xs: 'none', md: 'flex' } }}>
             <svg width="140" height="32" viewBox="0 0 140 32" fill="none" xmlns="http://www.w3.org/2000/svg">
               <g id="Group 2">
                 <path id="Vector" d="M61.1758 18.6667C61.1758 20.5333 60.497 22.0444 59.2243 23.1111C57.8667 24.2667 56.2546 24.8 54.2182 24.8C52.8606 24.8 51.4182 24.5333 49.9758 24.0889C48.5334 23.5555 47.1758 22.8444 45.9879 21.8667L48.194 18.5778C50.0606 20.0889 52.097 20.8889 54.3031 20.8889C54.9819 20.8889 55.4909 20.7111 55.8303 20.4444C56.2546 20.1778 56.4243 19.8222 56.4243 19.3778C56.4243 18.9333 56.1697 18.4889 55.6606 18.1333C55.1515 17.7778 54.3879 17.4222 53.3697 17.0667C52.3516 16.7111 51.5879 16.4444 51.0788 16.2667C50.5697 16 49.9758 15.7333 49.297 15.2889C47.9394 14.4 47.2606 13.0667 47.2606 11.3778C47.2606 9.68887 47.9394 8.17776 49.297 7.11109C50.4849 5.86665 52.2667 5.33331 54.3879 5.33331C56.5091 5.33331 58.7152 6.04442 60.8364 7.55554L58.9697 11.1111C57.3576 9.95554 55.8303 9.4222 54.2182 9.4222C52.6061 9.4222 51.8425 9.86665 51.8425 10.7555C51.8425 11.2889 52.097 11.6444 52.6061 11.9111C53.1152 12.1778 53.9637 12.5333 55.0667 12.8889C56.2546 13.2444 57.0182 13.5111 57.5273 13.7778C58.0364 13.9555 58.6303 14.3111 59.3091 14.6667C60.5819 15.4667 61.1758 16.8 61.1758 18.6667Z" fill="#4F4F4F" />
@@ -160,5 +161,7 @@ export default function Header() {
         </Toolbar>
       </Container>
     </AppBar>
+    <Outlet/>
+    </>
   );
 };
