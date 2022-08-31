@@ -1,4 +1,4 @@
-import { Routes, Route, Link, Outlet } from 'react-router';
+import { Link, Outlet } from 'react-router';
 
 const Layout = () => {
     return (
