@@ -1,7 +1,7 @@
 import React from 'react';
 import Typography from '@mui/material/Typography';
 
-export default function Calendar1()  {
+export default function CalendarArtist()  {
   return (
     <div >
       <Typography>
