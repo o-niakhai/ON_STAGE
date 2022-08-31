@@ -161,7 +161,6 @@ export default function Header() {
         </Toolbar>
       </Container>
     </AppBar>
-    <Outlet/>
     </>
   );
 };

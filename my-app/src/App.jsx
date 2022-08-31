@@ -1,9 +1,9 @@
 import React from 'react';
 import { Routes, Route } from 'react-router';
-import { ContentArtist }  from './components/ContentArtist';
-import { News }  from './components/News';
-import { CalendarArtist }  from './components/CalendarArtist';
-import { Header } from './components/Header'
+import ContentArtist   from './components/ContentArtist';
+import News from './components/News';
+import CalendarArtist from './components/CalendarArtist';
+import Header from './components/Header'
 import './App.css';
 
 
