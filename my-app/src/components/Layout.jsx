@@ -1,5 +1,6 @@
-import {  Outlet } from "react-router-dom";
-import { Link } from "react-router-dom";
+import {  Outlet, Link } from "react-router-dom";
+import React from 'react';
+
 
 const Layout = () => {
     return (
@@ -10,7 +11,7 @@ const Layout = () => {
                 <Link to="/calendar">Calendar</Link>
                 <Link to="/components/">ContentArtist</Link>
             </header>
-            <Outlet/>
+                <Outlet/>
             <footer>2022</footer>
         </>
     )
