@@ -11,7 +11,7 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-import {  Outlet } from "react-router-dom";
+// import { Outlet } from "react-router-dom";
 //import Home from '../components/Home';
 
 const pages = ['Home', 'News', 'Frends', 'Calendar'];
