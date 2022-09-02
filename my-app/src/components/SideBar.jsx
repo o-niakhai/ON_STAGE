@@ -17,7 +17,7 @@ import MenuItem from '@mui/material/MenuItem';
 const pages = ['Home', 'News', 'Frends', 'Calendar'];
 const settings = ['Home', 'News', 'Frends', 'Calendar'];
 
-export default function Header() {
+export default function SideBar() {
   
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
