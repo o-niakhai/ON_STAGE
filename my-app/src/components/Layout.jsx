@@ -1,6 +1,7 @@
 import {  Outlet, Link } from "react-router-dom";
 import React from 'react';
 import SideBar from "./SideBar";
+import ProfileArtist from "./ProfileArtist/ProfileArtist"
 
 
 const Layout = () => {
@@ -13,6 +14,7 @@ const Layout = () => {
                 <Link to="/components/">ContentArtist</Link>
             </SideBar>
                 <Outlet/>
+                <ProfileArtist/>
             <footer>2022</footer>
         </>
     )
