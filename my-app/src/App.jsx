@@ -13,9 +13,9 @@ const App = () => {
     <div >
       <Routes>
         <Route path='/' element={<Layout/>}>
-          <Route path="./components/ContentArtist.jsx" element={<ContentArtist />} />
-          <Route path="./components/News.jsx" element={<News />} />
-          <Route path="./components/CalendarArtist.jsx" element={<CalendarArtist />} />
+          <Route index element={<ContentArtist />} />
+          <Route path="news" element={<News />} />
+          <Route path="calendarArtist" element={<CalendarArtist />} />
         </Route>
       </Routes>
     </div>
