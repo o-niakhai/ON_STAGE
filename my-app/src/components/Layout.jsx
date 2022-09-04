@@ -1,7 +1,6 @@
 import {  Outlet, NavLink } from "react-router-dom";
 import React from 'react';
 import SideBar from "./SideBar";
-import ProfileArtist from "./ProfileArtist/ProfileArtist"
 
 
 const Layout = () => {

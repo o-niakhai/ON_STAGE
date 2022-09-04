@@ -3,7 +3,6 @@ import { Routes, Route } from 'react-router';
 import ContentArtist   from './components/ContentArtist';
 import News from './components/News';
 import CalendarArtist from './components/CalendarArtist';
-import SideBar from './components/SideBar';
 import Layout from './components/Layout';
 import './App.css';
 
