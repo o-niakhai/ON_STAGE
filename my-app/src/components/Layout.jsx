@@ -8,10 +8,10 @@ const Layout = () => {
     return (
         <>
             <SideBar>
-                <Link to="/home">Home</Link>
-                <Link to="/News">News</Link>
-                <Link to="/calendar">Calendar</Link>
-                <Link to="/components/">ContentArtist</Link>
+                <NavLink to="/" className={({isActive}) => isActive ? 'active-link': ''}>Home</NavLink>
+                <NavLink to="/News">News</NavLink>
+                <NavLink to="/calendar">Calendar</NavLink>
+                <NavLink to="/components/">ContentArtist</NavLink>
             </SideBar>
             <main className="container">
                 <Outlet/>
