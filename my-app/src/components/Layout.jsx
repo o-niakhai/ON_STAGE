@@ -13,8 +13,9 @@ const Layout = () => {
                 <Link to="/calendar">Calendar</Link>
                 <Link to="/components/">ContentArtist</Link>
             </SideBar>
+            <main className="container">
                 <Outlet/>
-                <ProfileArtist/>
+            </main>
             <footer>2022</footer>
         </>
     )
