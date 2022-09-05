@@ -86,7 +86,7 @@ export default function BasicTabs() {
                         value="Cooperation"/>
                     <Tab
                         to="./Residents/Residents.jsx"
-                        label="./Residents/Residents.jsx" {...a11yProps(3)}
+                        label="Residents" {...a11yProps(3)}
                         style={{ fontSize: '0.7rem', color: '#949494' }}
                         icon={<BadgeRoundedIcon />}
                         iconPosition="start"
