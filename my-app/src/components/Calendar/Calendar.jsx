@@ -7,8 +7,8 @@ import moment from "moment";
 
 export default class CalendarComp extends React.Component {
   state = {
-    value: moment("2022-01-25"),
-    selectedValue: moment("2022-01-25"),
+    value: moment("2022-09-06"),
+    selectedValue: moment("2022-09-06"),
     isModalVisible: false
   };
 

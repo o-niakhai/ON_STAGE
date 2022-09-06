@@ -30,7 +30,7 @@ export default function ContentArtist() {
         </Box>
         <Box gridColumn="span 8">
           <Item>
-            
+            span 8
           </Item>
         </Box>
         <Box gridColumn="span 4">
