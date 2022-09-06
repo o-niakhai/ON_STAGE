@@ -1,14 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "antd/dist/antd.css";
-// import './index.css';
+import './styles.css';
 import { Calendar, Alert, Modal } from "antd";
 import moment from "moment";
 
 export default class CalendarComp extends React.Component {
   state = {
-    value: moment("2017-01-25"),
-    selectedValue: moment("2017-01-25"),
+    value: moment("2022-01-25"),
+    selectedValue: moment("2022-01-25"),
     isModalVisible: false
   };
 

@@ -92,11 +92,11 @@ export default function BasicTabs() {
                         iconPosition="start"
                         value="Residents"/>
                     {/* <Tab
-                        label="Share" {...a11yProps(4)}
+                        label="Calendar" {...a11yProps(4)}
                         style={{ fontSize: '0.7rem', color: '#949494' }}
                         icon={<ScreenShareRoundedIcon />}
                         iconPosition="start"
-                        value="Share"/> */}
+                        value="Calendar"/>  */}
                 </Tabs>
             </Box>
             <Routes>
