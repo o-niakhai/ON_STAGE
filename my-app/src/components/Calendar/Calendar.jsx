@@ -5,6 +5,7 @@ import './styles.css';
 import { Calendar, Alert, Modal } from "antd";
 import moment from "moment";
 
+
 export default class CalendarComp extends React.Component {
   state = {
     value: moment("2022-09-06"),
@@ -52,24 +53,20 @@ export default class CalendarComp extends React.Component {
         <Alert
           message={`You selected date: ${
             selectedValue && selectedValue.format("YYYY-MM-DD")
-          }`}
-        />
+          }`} />
         <Calendar
           value={value}
           onSelect={this.onSelect}
           onPanelChange={this.onPanelChange}
-          dateCellRender={this.dateCellRender}
-        />
+          dateCellRender={this.dateCellRender} />
         <Modal
           title="Input your plan"
           visible={isModalVisible}
           onOk={this.handleOk}
-          onCancel={this.handleCancel}
-        >
+          onCancel={this.handleCancel} >
           <input type="text" name="" id="" />
         </Modal>
       </>
     );
   }
 }
-export class {CalendarComp};
