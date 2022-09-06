@@ -72,3 +72,4 @@ export default class CalendarComp extends React.Component {
     );
   }
 }
+export class {CalendarComp};
