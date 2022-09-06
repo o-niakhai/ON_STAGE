@@ -25,7 +25,7 @@ export default function ContentArtist() {
         </Box>
         <Box gridColumn="span 4">
           <Item>
-            <SideBar />
+            <CalendarComp />
           </Item>
         </Box>
         <Box gridColumn="span 8">

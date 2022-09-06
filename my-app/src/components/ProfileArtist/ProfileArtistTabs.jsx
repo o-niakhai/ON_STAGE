@@ -13,6 +13,7 @@ import Message from './Message/Message';
 import Cooperation from './Cooperation/Cooperation';
 import Residents from './Residents/Residents';
 import {  Routes, Route } from 'react-router-dom';
+import CalendarComp from '../Calendar/Calendar'
 
 
 
@@ -101,7 +102,7 @@ export default function BasicTabs() {
             </Box>
             <Routes>
                 <Route>
-                    <Route path='./About/About.jsx' element={<About/>} />
+                    <Route path='../Calendar' element={<CalendarComp/>} />
                     <Route path='./Message/Message.jsx' element={<Message/>} />
                     <Route path='./Cooperation/Cooperation.jsx' element={<Cooperation/>} />
                     <Route path='./Residents/Residents.jsx' element={<Residents/>} />

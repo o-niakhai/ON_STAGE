@@ -7,6 +7,8 @@ import BadgeRoundedIcon from '@mui/icons-material/BadgeRounded';
 import ScreenShareRoundedIcon from '@mui/icons-material/ScreenShareRounded';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
+import {  Outlet, NavLink } from "react-router-dom";
+
 
 
 export default function ProfileArtistActions() {
@@ -34,7 +36,12 @@ export default function ProfileArtistActions() {
                     onChange={handleChange}
                     indicatorColor="secondary"
                     sx={{ height: '10%' }}>
-                    <Tab style={{ fontSize: '0.7rem', color: '#949494' }} icon={<FeaturedPlayListRoundedIcon />} iconPosition="start" value="About" label="About" />
+
+                    <NavLink to="/" className={setActive}>Home
+                        <Tab style={{ fontSize: '0.7rem', color: '#949494' }} 
+                        icon={<FeaturedPlayListRoundedIcon />} 
+                        iconPosition="start" value="About" label="About" />
+                    </NavLink>
                     <Tab style={{ fontSize: '0.7rem', color: '#949494' }} icon={<AddCommentRoundedIcon />} iconPosition="start" value="Message" label="Message" />
                     <Tab style={{ fontSize: '0.7rem', color: '#949494' }} icon={<BusinessCenterRoundedIcon />} iconPosition="start" value="Cooperation" label="Cooperation" />
                     <Tab style={{ fontSize: '0.7rem', color: '#949494' }} icon={<BadgeRoundedIcon />} iconPosition="start" value="Residents" label="Residents" />
