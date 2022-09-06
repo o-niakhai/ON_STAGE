@@ -100,10 +100,12 @@ export default function BasicTabs() {
                 </Tabs>
             </Box>
             <Routes>
-                <Route path='./About/About.jsx' element={<About/>} />
-                <Route path='./Message/Message.jsx' element={<Message/>} />
-                <Route path='./Cooperation/Cooperation.jsx' element={<Cooperation/>} />
-                <Route path='./Residents/Residents.jsx' element={<Residents/>} />
+                <Route>
+                    <Route path='./About/About.jsx' element={<About/>} />
+                    <Route path='./Message/Message.jsx' element={<Message/>} />
+                    <Route path='./Cooperation/Cooperation.jsx' element={<Cooperation/>} />
+                    <Route path='./Residents/Residents.jsx' element={<Residents/>} />
+                </Route>
             </Routes>
         </Box>
     );
