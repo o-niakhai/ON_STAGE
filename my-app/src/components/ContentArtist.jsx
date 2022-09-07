@@ -4,7 +4,7 @@ import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import ProfileArtist from './ProfileArtist/ProfileArtist';
 import SideBar from './Sidebar/SideBar';
-import CalendarComp from './Calendar/Calendar';
+import CalendarComp from './ProfileArtist/Calendar/Calendar';
 
 
 

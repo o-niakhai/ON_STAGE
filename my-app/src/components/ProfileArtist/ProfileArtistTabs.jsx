@@ -13,7 +13,7 @@ import Message from './Message/Message';
 import Cooperation from './Cooperation/Cooperation';
 import Residents from './Residents/Residents';
 import {  Routes, Route } from 'react-router-dom';
-import CalendarComp from '../Calendar/Calendar'
+import CalendarComp from './Calendar/Calendar'
 
 
 

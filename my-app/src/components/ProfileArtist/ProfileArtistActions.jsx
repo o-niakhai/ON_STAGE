@@ -8,6 +8,7 @@ import ScreenShareRoundedIcon from '@mui/icons-material/ScreenShareRounded';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import {  Outlet, NavLink } from "react-router-dom";
+import Calendar from "./Calendar/Calendar"
 
 
 
@@ -37,15 +38,17 @@ export default function ProfileArtistActions() {
                     indicatorColor="secondary"
                     sx={{ height: '10%' }}>
 
-                    <NavLink to="/" className={setActive}>Home
+                    <NavLink to="../Calendar/Calendar.jsx" className={setActive}><Calendar/>
                         <Tab style={{ fontSize: '0.7rem', color: '#949494' }} 
                         icon={<FeaturedPlayListRoundedIcon />} 
-                        iconPosition="start" value="About" label="About" />
+                        iconPosition="start" value="Calendar" label="Calendar" />
                     </NavLink>
-                    <Tab style={{ fontSize: '0.7rem', color: '#949494' }} icon={<AddCommentRoundedIcon />} iconPosition="start" value="Message" label="Message" />
-                    <Tab style={{ fontSize: '0.7rem', color: '#949494' }} icon={<BusinessCenterRoundedIcon />} iconPosition="start" value="Cooperation" label="Cooperation" />
-                    <Tab style={{ fontSize: '0.7rem', color: '#949494' }} icon={<BadgeRoundedIcon />} iconPosition="start" value="Residents" label="Residents" />
-                    <Tab style={{ fontSize: '0.7rem', color: '#949494' }} icon={<ScreenShareRoundedIcon />} iconPosition="start" value="Share" label="Share" />
+                    <NavLink to="/my-app/src/components/ProfileArtist/About/About.jsx"
+                         className={setActive}>Home
+                        <Tab style={{ fontSize: '0.7rem', color: '#949494' }} icon={<AddCommentRoundedIcon />} iconPosition="start" value="Message" label="Message" />
+                        <Tab style={{ fontSize: '0.7rem', color: '#949494' }} icon={<BusinessCenterRoundedIcon />} iconPosition="start" value="Cooperation" label="Cooperation" />
+                        <Tab style={{ fontSize: '0.7rem', color: '#949494' }} icon={<BadgeRoundedIcon />} iconPosition="start" value="Residents" label="Residents" />
+                        <Tab style={{ fontSize: '0.7rem', color: '#949494' }} icon={<ScreenShareRoundedIcon />} iconPosition="start" value="Share" label="Share" />
                 </Tabs>
             </Box>
         </div>
