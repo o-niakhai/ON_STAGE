@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "npm-force-resolutions": "^0.0.10"
+    
   },
   "scripts": {
     "start": "react-scripts start",
