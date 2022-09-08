@@ -5,7 +5,8 @@
   "dependencies": {
     "@mui/material": "^5.10.4",
     "antd": "^4.23.0",
-    "react-router": "^6.3.0"
+    "react-router": "^6.3.0",
+    "react-scripts": "^5.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
