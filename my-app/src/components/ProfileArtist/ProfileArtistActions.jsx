@@ -8,7 +8,7 @@ import ScreenShareRoundedIcon from '@mui/icons-material/ScreenShareRounded';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import {  Outlet, NavLink } from "react-router-dom";
-import Calendar from "./Calendar/Calendar"
+import CalendarComp from "./Calendar/Calendar"
 
 
 
@@ -38,13 +38,13 @@ export default function ProfileArtistActions() {
                     indicatorColor="secondary"
                     sx={{ height: '10%' }}>
 
-                    <NavLink to="../Calendar/Calendar.jsx" className={setActive}><Calendar/>
+                    <NavLink to="../Calendar/Calendar.jsx" className={setActive}>CalendarComp<CalendarComp/>
                         <Tab style={{ fontSize: '0.7rem', color: '#949494' }} 
                         icon={<FeaturedPlayListRoundedIcon />} 
-                        iconPosition="start" value="Calendar" label="Calendar" />
+                        iconPosition="start" value="CalendarComp" label="Calendar" />
                     </NavLink>
                     <NavLink to="/my-app/src/components/ProfileArtist/About/About.jsx"
-                         className={setActive}>Home
+                         className={setActive}>Message</NavLink>
                         <Tab style={{ fontSize: '0.7rem', color: '#949494' }} icon={<AddCommentRoundedIcon />} iconPosition="start" value="Message" label="Message" />
                         <Tab style={{ fontSize: '0.7rem', color: '#949494' }} icon={<BusinessCenterRoundedIcon />} iconPosition="start" value="Cooperation" label="Cooperation" />
                         <Tab style={{ fontSize: '0.7rem', color: '#949494' }} icon={<BadgeRoundedIcon />} iconPosition="start" value="Residents" label="Residents" />

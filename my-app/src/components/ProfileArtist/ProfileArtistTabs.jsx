@@ -102,7 +102,7 @@ export default function BasicTabs() {
             </Box>
             <Routes>
                 <Route>
-                    <Route path='../Calendar' element={<CalendarComp/>} />
+                    <Route path='./Calendar/Calendar.jsx' element={<CalendarComp/>} />
                     <Route path='./Message/Message.jsx' element={<Message/>} />
                     <Route path='./Cooperation/Cooperation.jsx' element={<Cooperation/>} />
                     <Route path='./Residents/Residents.jsx' element={<Residents/>} />
