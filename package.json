@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/o-niakhai/ON_STAGE/issues"
   },
-  "homepage": "https://github.com/o-niakhai/ON_STAGE#readme"
+  "homepage": "https://github.com/o-niakhai/ON_STAGE#readme",
+  "dependencies": {
+    "create-react-app": "^5.0.1"
+  }
 }
