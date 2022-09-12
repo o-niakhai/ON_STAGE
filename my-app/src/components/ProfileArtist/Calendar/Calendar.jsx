@@ -1,14 +1,14 @@
 import React from "react";
 import DatePicker from "react-datepicker";
 
-export default function News() {
+export default function Calendar () {
   return (
-    <div >
-      <DatePicker 
+    <>
+      <Datepicker 
         controls={['calendar']}
         min="1920-01-01"
         max="2050-01-01"
       />
-    </div>
+    </>
   );
 }
