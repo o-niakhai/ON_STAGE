@@ -4,6 +4,7 @@
     "@emotion/styled": "^11.10.4",
     "@mui/icons-material": "^5.10.3",
     "@mui/material": "^5.10.5",
+    "react-datepicker": "^4.8.0",
     "react-router-dom": "^6.4.0"
   }
 }
