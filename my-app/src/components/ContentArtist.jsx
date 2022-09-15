@@ -4,6 +4,7 @@ import Box from '@mui/material/Box';
 import Paper from '@mui/material/Paper';
 import ProfileArtist from './ProfileArtist/ProfileArtist';
 import CalendarComp from './ProfileArtist/Calendar/Calendar';
+import SideBar from './Sidebar/SideBar';
 
 
 
@@ -25,12 +26,12 @@ export default function ContentArtist() {
         </Box>
         <Box gridColumn="span 4">
           <Item>
-            <CalendarComp />
+            <SideBar />
           </Item>
         </Box>
         <Box gridColumn="span 8">
           <Item>
-            span 8
+          <CalendarComp />
           </Item>
         </Box>
         <Box gridColumn="span 4">

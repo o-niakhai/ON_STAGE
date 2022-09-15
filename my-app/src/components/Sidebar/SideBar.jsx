@@ -3,7 +3,7 @@ import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import ArtistTags from './ArtistTags';
-import ArtistPlayer from './ArtistPlayer';
+import SidePlayer from './ArtistPlayer';
 
 
 export default function SideBar() {
@@ -20,7 +20,7 @@ export default function SideBar() {
           <Typography variant="h6" textAlign="left">
             Music
           </Typography>
-          <ArtistPlayer />
+          <SidePlayer />
         </Grid>
       </Grid>
     </Box>
