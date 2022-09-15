@@ -20,7 +20,9 @@ export default function SideBar() {
           <Typography variant="h6" textAlign="left">
             Music
           </Typography>
-          <SidePlayer />
+          <>
+            <SidePlayer />
+          </>
         </Grid>
       </Grid>
     </Box>
