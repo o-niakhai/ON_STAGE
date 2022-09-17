@@ -3,10 +3,8 @@ import DatePicker from 'react-datepicker';
 import Calendar from 'react-calendar';
 import Box from '@mui/material/Box';
 
-
-const [value, onChange] = useState(new Date());
-
 export default function CalendarCmp () {
+  const [value, onChange] = useState(new Date());
   return (
     <Box>
       <Box>
