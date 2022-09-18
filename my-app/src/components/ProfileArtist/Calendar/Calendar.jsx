@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import Calendar from 'react-calendar';
+import React from 'react';
+import Box from '@mui/material/Box';
 import moment from 'moment';
 import CalendarMonthView from "react-calendar-month-view";
 
@@ -11,7 +11,7 @@ export default function CalendarCmp () {
 
     if (diff === -259200000 || diff === 259200000) {
       return (
-        <div
+        <Box
           style={{
             boxSizing: "border-box",
             height: "100%",
@@ -26,8 +26,8 @@ export default function CalendarCmp () {
     }
   };
   return (
-    <div className="CalendarCmp">
+    <Box className="CalendarCmp">
       <CalendarMonthView renderDay={_renderDay} />
-    </div>
+    </Box>
   );
 }
