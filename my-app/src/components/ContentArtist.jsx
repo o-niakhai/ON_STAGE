@@ -5,6 +5,7 @@ import Paper from '@mui/material/Paper';
 import ProfileArtist from './ProfileArtist/ProfileArtist';
 import CalendarComp from './ProfileArtist/Calendar/Calendar';
 import SideBar from './Sidebar/SideBar';
+import ArtistVideo from './Sidebar/ArtistVideo';
 
 
 
@@ -35,7 +36,9 @@ export default function ContentArtist() {
           </Item>
         </Box>
         <Box gridColumn="span 4">
-          <Item>xs=4</Item>
+          <Item>
+            <ArtistVideo />
+          </Item>
         </Box>
       </Box>
     </Box>
