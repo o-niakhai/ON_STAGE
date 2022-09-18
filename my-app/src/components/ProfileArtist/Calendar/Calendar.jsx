@@ -5,16 +5,18 @@ import Box from '@mui/material/Box';
 export default function CalendarCmp () {
   const [value, onChange] = useState(new Date());
   return (
-    <Box>
+    <Box 
+    sx={{
+      display: 'flexbox',
+      alignItems: 'stretch',
+      width: '100%',
+      height: '100%',
+      "&:hover": {
+        backgroundColor: 'rgba(0, 0, 0, 0.01)'
+      },}}>
         <Calendar 
         onChange={onChange} 
-        value={value} 
-        sx={{m: 0,
-          boxShadow: 5,
-          border: 2,
-          borderColor: 'primary.light',
-          '& .MuiDataGrid-cell:hover': {
-            color: 'primary.main'} }}
+        value={value}
         />
     </Box>
   );
