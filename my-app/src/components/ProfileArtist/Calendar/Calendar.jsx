@@ -17,16 +17,15 @@ export default function CalendarCmp () {
             height: "100%",
             width: "100%",
             backgroundImage:
-              "url(https://farm2.staticflickr.com/1203/1475793643_d911a66735_m.jpg)",
-            backgroundSize: "cover"
-            // borderRadius: showDefaultStyles ? 0 : '10%'
+              "url(https://s-trojmiasto.pl/zdj/c/n/3/3139/2000x0/3139271.jpg)",
+            backgroundSize: "cover",
           }}
         />
       );
     }
   };
   return (
-    <Box className="CalendarCmp">
+    <Box>
       <CalendarMonthView renderDay={_renderDay} />
     </Box>
   );
