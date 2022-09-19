@@ -5,7 +5,7 @@ import Paper from '@mui/material/Paper';
 import ProfileArtist from './ProfileArtist/ProfileArtist';
 import CalendarComp from './ProfileArtist/Calendar/Calendar';
 import SideBar from './Sidebar/SideBar';
-import ArtistVideo from './Sidebar/ArtistVideo';
+import ArtistVideo from './Sidebar/VideoCmp/ArtistVideo';
 
 
 
