@@ -26,7 +26,6 @@ export default function SideBar() {
           } catch (error) {
             console.error()
           }
-            
           </>
         </Grid>
       </Grid>
