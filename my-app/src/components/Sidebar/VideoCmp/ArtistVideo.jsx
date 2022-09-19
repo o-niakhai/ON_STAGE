@@ -5,7 +5,12 @@ import Video from "./VideoRender";
 export default function ArtistVideo() {
   return (
     <>
-      <Video videoId="zBKei6Ji_WI" />
+    try {
+        <Video videoId="zBKei6Ji_WI" />
+    } catch (error) {
+        console.log(error)
+    }
+      
     </>
   );
 }
