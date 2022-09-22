@@ -21,7 +21,11 @@ export default function SideBar() {
             Music
           </Typography>
           <>
-          
+          try {
+            <SidePlayer />
+          } catch (error) {
+            console.error()
+          }
           </>
         </Grid>
       </Grid>
