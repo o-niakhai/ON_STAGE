@@ -7,8 +7,6 @@ import CalendarComp from './ProfileArtist/Calendar/Calendar';
 import SideBar from './Sidebar/SideBar';
 import ArtistVideo from './Sidebar/VideoCmp/ArtistVideo';
 
-
-
 const Item = styled(Paper)(({ theme }) => ({
   ...theme.typography.body2,
   padding: theme.spacing(1),
