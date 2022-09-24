@@ -5,7 +5,7 @@ import Video from "./VideoRender";
 export default function ArtistVideo() {
   return (
     <>
-        <Video videoId="zBKei6Ji_WI" />
+        <Video/>
     </>
   );
 }
