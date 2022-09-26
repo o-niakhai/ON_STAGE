@@ -7,12 +7,16 @@ import CalendarComp from './ProfileArtist/Calendar/Calendar';
 import SideBar from './Sidebar/SideBar';
 import ArtistVideo from './Sidebar/VideoCmp/ArtistVideo';
 
+
+
 const Item = styled(Paper)(({ theme }) => ({
   ...theme.typography.body2,
   padding: theme.spacing(1),
   textAlign: 'center',
   color: theme.palette.text.secondary,
 }));
+
+
 
 export default function ContentArtist() {
   return (
@@ -35,7 +39,7 @@ export default function ContentArtist() {
         </Box>
         <Box gridColumn="span 4">
           <Item>
-            <ArtistVideo />
+            {/* <ArtistVideo /> */}
           </Item>
         </Box>
       </Box>
