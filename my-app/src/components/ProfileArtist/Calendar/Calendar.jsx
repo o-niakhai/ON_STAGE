@@ -25,8 +25,8 @@ export default function CalendarCmp () {
     }
   };
   return (
-    <Box>
+    <>
       <CalendarMonthView renderDay={_renderDay} />
-    </Box>
+    </>
   );
 }

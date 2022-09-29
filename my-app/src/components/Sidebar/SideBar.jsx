@@ -16,16 +16,12 @@ export default function SideBar() {
             </Typography>
           <ArtistTags />
         </Grid>
-        <Grid item xs={12}>
+        <Grid item xs={10}>
           <Typography variant="h6" textAlign="left">
             Music
           </Typography>
-          <>
-          try {
+          <> 
             <SidePlayer />
-          } catch (error) {
-            console.error()
-          }
           </>
         </Grid>
       </Grid>
