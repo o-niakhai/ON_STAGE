@@ -22,6 +22,7 @@ export default function SideBar() {
           </Typography>
           <> 
             <SidePlayer />
+            
           </>
         </Grid>
       </Grid>
