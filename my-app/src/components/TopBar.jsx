@@ -11,11 +11,11 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
-// import { Outlet } from "react-router-dom";
+import { Link } from "react-router-dom";
 //import Home from '../components/Home';
 
 const pages = ['Home', 'News', 'Frends', 'Calendar'];
-const settings = ['Home', 'News', 'Frends', 'Calendar'];
+const settings = ['Home', 'News',  'Frends', 'Calendar'];
 
 export default function TopBar() {
   
@@ -96,7 +96,13 @@ export default function TopBar() {
                 }}>
                 {pages.map((page) => (
                   <MenuItem key={page} onClick={handleCloseNavMenu}>
-                    <Typography textAlign="center">{page}</Typography>
+                    <Typography textAlign="center">
+                      <Link 
+                      style={{ textDecoration: "none", color: "black"}}  
+                      to={`/${page}`}>
+                        {page}
+                      </Link>
+                    </Typography>
                   </MenuItem>
                 ))}
               </Menu>
@@ -126,7 +132,11 @@ export default function TopBar() {
                   key={page}
                   onClick={handleCloseNavMenu}
                   sx={{ my: 2, color: 'black', display: 'block' }}>
-                  {page}
+                    <Link 
+                      style={{ textDecoration: "none", color: "black"}}  
+                    to={`/${page}`}>
+                      {page}
+                    </Link>
                 </Button>
               ))}
             </Box>

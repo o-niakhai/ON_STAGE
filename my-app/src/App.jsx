@@ -1,21 +1,22 @@
 import React from 'react';
-import { Routes, Route } from 'react-router';
-import ContentArtist   from './components/ContentArtist';
-import News from './components/News';
-import CalendarComp from './components/ProfileArtist/Calendar/Calendar';
-import Layout from './components/Layout';
+import TopBar   from './components/TopBar';
+import {Route, Routes} from 'react-router';
 import './App.css';
+import ContentArtist from './components/ContentArtist';
+import Home from './components/Home';
+import News from './components/News';
+import Frends from './components/Frends';
 
 
 const App = () => {
   return (
     <div >
+      <TopBar/>
       <Routes>
-        <Route path='/' element={<Layout/>}>
-          <Route index element={<ContentArtist />} />
-          <Route path="./components/News.jsx" element={<News />} />
-          <Route path="./components/ProfileArtist/Calendar/Calendar.jsx" element={<CalendarComp />} />
-        </Route>
+          <Route path="/" element={<ContentArtist/>}/>
+          <Route path="Home" element={<ContentArtist/>}/>
+          <Route path="News" element={<News/>}/>
+          <Route path="Frends" element={<Frends/>}/>
       </Routes>
     </div>
   );
