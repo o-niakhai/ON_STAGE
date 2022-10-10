@@ -27,16 +27,17 @@ export default function ContentArtist() {
             <ProfileArtist />
           </Item>
         </Box>
-        <Box gridColumn="span 4">
-          <Item>
-            <SideBar />
-          </Item>
-        </Box>
         <Box gridColumn="span 8">
           <Item>
           <CalendarComp />
           </Item>
         </Box>
+        <Box gridColumn="span 4">
+          <Item>
+            <SideBar />
+          </Item>
+        </Box>
+        
         <Box gridColumn="span 4">
           <Item>
             {/* <ArtistVideo /> */}
