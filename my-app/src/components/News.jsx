@@ -1,5 +1,16 @@
 import React from 'react';
+import Paper from '@mui/material/Paper';
+import { styled } from '@mui/material/styles';
+import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
+
+
+const Item = styled(Paper)(({ theme }) => ({
+  ...theme.typography.body2,
+  padding: theme.spacing(1),
+  textAlign: 'center',
+  color: theme.palette.text.secondary,
+}));
 
 export default function News() {
   return (
@@ -25,6 +36,87 @@ export default function News() {
           </Item>
         </Box>
         <Box gridColumn="span 2">
+          <Item>
+            
+          </Item>
+        </Box>
+        <Box gridColumn="span 2">
+          <Item>
+            
+          </Item>
+        </Box><Box gridColumn="span 2">
+          <Item>
+            
+          </Item>
+        </Box><Box gridColumn="span 2">
+          <Item>
+            
+          </Item>
+        </Box><Box gridColumn="span 2">
+          <Item>
+            
+          </Item>
+        </Box><Box gridColumn="span 2">
+          <Item>
+            
+          </Item>
+        </Box><Box gridColumn="span 2">
+          <Item>
+            
+          </Item>
+        </Box><Box gridColumn="span 2">
+          <Item>
+            
+          </Item>
+        </Box><Box gridColumn="span 2">
+          <Item>
+            
+          </Item>
+        </Box><Box gridColumn="span 2">
+          <Item>
+            
+          </Item>
+        </Box><Box gridColumn="span 2">
+          <Item>
+            
+          </Item>
+        </Box><Box gridColumn="span 2">
+          <Item>
+            
+          </Item>
+        </Box><Box gridColumn="span 2">
+          <Item>
+            
+          </Item>
+        </Box><Box gridColumn="span 2">
+          <Item>
+            
+          </Item>
+        </Box><Box gridColumn="span 2">
+          <Item>
+            
+          </Item>
+        </Box><Box gridColumn="span 2">
+          <Item>
+            
+          </Item>
+        </Box><Box gridColumn="span 2">
+          <Item>
+            
+          </Item>
+        </Box><Box gridColumn="span 2">
+          <Item>
+            
+          </Item>
+        </Box><Box gridColumn="span 2">
+          <Item>
+            
+          </Item>
+        </Box><Box gridColumn="span 2">
+          <Item>
+            
+          </Item>
+        </Box><Box gridColumn="span 2">
           <Item>
             
           </Item>
