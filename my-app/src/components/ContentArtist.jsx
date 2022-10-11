@@ -37,7 +37,6 @@ export default function ContentArtist() {
             <SideBar />
           </Item>
         </Box>
-        
         <Box gridColumn="span 4">
           <Item>
             {/* <ArtistVideo /> */}
