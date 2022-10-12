@@ -3,6 +3,7 @@ import Paper from '@mui/material/Paper';
 import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
+import RecipeReviewCard from './Post'
 
 
 const Item = styled(Paper)(({ theme }) => ({
@@ -22,7 +23,7 @@ export default function News() {
         <Box  display="grid" gridTemplateColumns="repeat(12, 1fr)" gap={1}>
         <Box gridColumn="span 2">
           <Item>
-            
+            <RecipeReviewCard />
           </Item>
         </Box>
         <Box gridColumn="span 2">

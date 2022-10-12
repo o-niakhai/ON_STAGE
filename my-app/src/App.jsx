@@ -3,8 +3,7 @@ import TopBar   from './components/TopBar';
 import {Route, Routes} from 'react-router';
 import './App.css';
 import ContentArtist from './components/ContentArtist';
-import Home from './components/Home';
-import News from './components/News';
+import News from './components/NewsCom/News';
 import Frends from './components/Frends';
 
 
