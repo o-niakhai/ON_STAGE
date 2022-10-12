@@ -28,98 +28,98 @@ export default function News() {
         </Box>
         <Box gridColumn="span 2">
           <Item>
-            
+          <RecipeReviewCard />
           </Item>
         </Box>
         <Box gridColumn="span 2">
           <Item>
-            
+            <RecipeReviewCard />
           </Item>
         </Box>
         <Box gridColumn="span 2">
           <Item>
-            
+          <RecipeReviewCard />
           </Item>
         </Box>
         <Box gridColumn="span 2">
           <Item>
-            
+          <RecipeReviewCard />
           </Item>
         </Box><Box gridColumn="span 2">
           <Item>
-            
+          <RecipeReviewCard />
           </Item>
         </Box><Box gridColumn="span 2">
           <Item>
-            
+          <RecipeReviewCard />
           </Item>
         </Box><Box gridColumn="span 2">
           <Item>
-            
+          <RecipeReviewCard />
           </Item>
         </Box><Box gridColumn="span 2">
           <Item>
-            
+          <RecipeReviewCard />
           </Item>
         </Box><Box gridColumn="span 2">
           <Item>
-            
+          <RecipeReviewCard />
           </Item>
         </Box><Box gridColumn="span 2">
           <Item>
-            
+          <RecipeReviewCard />
           </Item>
         </Box><Box gridColumn="span 2">
           <Item>
-            
+          <RecipeReviewCard />
           </Item>
         </Box><Box gridColumn="span 2">
           <Item>
-            
+          <RecipeReviewCard />
           </Item>
         </Box><Box gridColumn="span 2">
           <Item>
-            
+          <RecipeReviewCard />
           </Item>
         </Box><Box gridColumn="span 2">
           <Item>
-            
+          <RecipeReviewCard />
           </Item>
         </Box><Box gridColumn="span 2">
           <Item>
-            
+          <RecipeReviewCard />
           </Item>
         </Box><Box gridColumn="span 2">
           <Item>
-            
+          <RecipeReviewCard />
           </Item>
         </Box><Box gridColumn="span 2">
           <Item>
-            
+          <RecipeReviewCard />
           </Item>
         </Box><Box gridColumn="span 2">
           <Item>
-            
+          <RecipeReviewCard />
           </Item>
         </Box><Box gridColumn="span 2">
           <Item>
-            
+          <RecipeReviewCard />
           </Item>
         </Box><Box gridColumn="span 2">
           <Item>
-            
+          <RecipeReviewCard />
           </Item>
         </Box><Box gridColumn="span 2">
           <Item>
-            
+          <RecipeReviewCard />
           </Item>
         </Box><Box gridColumn="span 2">
           <Item>
-            
+          <RecipeReviewCard />
           </Item>
         </Box><Box gridColumn="span 2">
           <Item>
-            
+          <RecipeReviewCard />
           </Item>
         </Box>
         </Box>
