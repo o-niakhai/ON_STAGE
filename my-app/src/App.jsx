@@ -4,7 +4,7 @@ import {Route, Routes} from 'react-router';
 import './App.css';
 import ContentArtist from './components/ContentArtist';
 import News from './components/NewsCom/News';
-import Frends from './components/Frends';
+import Frends from './components/Frends/Frends';
 import Calendar from './components/ProfileArtist/Calendar/Calendar';
 
 

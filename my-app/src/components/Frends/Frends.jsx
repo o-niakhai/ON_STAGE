@@ -37,24 +37,21 @@ export default function CheckboxListSecondary() {
                 edge="end"
                 onChange={handleToggle(value)}
                 checked={checked.indexOf(value) !== -1}
-                inputProps={{ 'aria-labelledby': labelId }}
-              />
+                inputProps={{ 'aria-labelledby': labelId }}/>
             }
-            disablePadding
-          >
+            disablePadding>
             <ListItemButton>
+              
               <ListItemAvatar>
                 <Avatar
                   alt={`Avatar n°${value + 1}`}
-                  src={`/static/images/avatar/${value + 1}.jpg`}
-                />
+                  src={`/logoBands/Avatar${value + 1}.jpg`}/>
               </ListItemAvatar>
               <ListItemText id={labelId} primary={`Line item ${value + 1}`} />
             </ListItemButton>
               <IconButton 
                 aria-label="comment"
-                sx={{ mr: 5}}
-                >
+                sx={{ mr: 5}}>
                 <CommentIcon />
               </IconButton>
           </ListItem>
