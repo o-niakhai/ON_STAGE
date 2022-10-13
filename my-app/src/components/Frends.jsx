@@ -6,6 +6,8 @@ import ListItemText from '@mui/material/ListItemText';
 import ListItemAvatar from '@mui/material/ListItemAvatar';
 import Checkbox from '@mui/material/Checkbox';
 import Avatar from '@mui/material/Avatar';
+import CommentIcon from '@mui/icons-material/Comment';
+import IconButton from '@mui/material/IconButton';
 
 export default function CheckboxListSecondary() {
   const [checked, setChecked] = React.useState([1]);
@@ -24,7 +26,7 @@ export default function CheckboxListSecondary() {
   };
 
   return (
-    <List dense sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
+    <List dense sx={{ mt:5, mx: 5, width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
       {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map((value) => {
         const labelId = `checkbox-list-secondary-label-${value}`;
         return (
@@ -49,6 +51,12 @@ export default function CheckboxListSecondary() {
               </ListItemAvatar>
               <ListItemText id={labelId} primary={`Line item ${value + 1}`} />
             </ListItemButton>
+              <IconButton 
+                aria-label="comment"
+                sx={{ mr: 5}}
+                >
+                <CommentIcon />
+              </IconButton>
           </ListItem>
         );
       })}
