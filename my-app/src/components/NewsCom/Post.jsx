@@ -1,110 +1,144 @@
 import * as React from 'react';
-import { styled } from '@mui/material/styles';
-import Card from '@mui/material/Card';
-import CardHeader from '@mui/material/CardHeader';
-import CardMedia from '@mui/material/CardMedia';
-import CardContent from '@mui/material/CardContent';
-import CardActions from '@mui/material/CardActions';
-import Collapse from '@mui/material/Collapse';
-import Avatar from '@mui/material/Avatar';
-import IconButton, { IconButtonProps } from '@mui/material/IconButton';
-import Typography from '@mui/material/Typography';
-import { red } from '@mui/material/colors';
-import FavoriteIcon from '@mui/icons-material/Favorite';
-import ShareIcon from '@mui/icons-material/Share';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import MoreVertIcon from '@mui/icons-material/MoreVert';
+import AspectRatio from '@mui/joy/AspectRatio';
+import Avatar from '@mui/joy/Avatar';
+import Box from '@mui/joy/Box';
+import Card from '@mui/joy/Card';
+import CardOverflow from '@mui/joy/CardOverflow';
+import Link from '@mui/joy/Link';
+import IconButton from '@mui/joy/IconButton';
+import Input from '@mui/joy/Input';
+import Typography from '@mui/joy/Typography';
+import MoreHoriz from '@mui/icons-material/MoreHoriz';
+import FavoriteBorder from '@mui/icons-material/FavoriteBorder';
+import ModeCommentOutlined from '@mui/icons-material/ModeCommentOutlined';
+import SendOutlined from '@mui/icons-material/SendOutlined';
+import Face from '@mui/icons-material/Face';
+import BookmarkBorderRoundedIcon from '@mui/icons-material/BookmarkBorderRounded';
 
-interface ExpandMoreProps extends IconButtonProps {
-  expand: boolean;
-}
-
-const ExpandMore = styled((props: ExpandMoreProps) => {
-  const { expand, ...other } = props;
-  return <IconButton {...other} />;
-})(({ theme, expand }) => ({
-  transform: !expand ? 'rotate(0deg)' : 'rotate(180deg)',
-  marginLeft: 'auto',
-  transition: theme.transitions.create('transform', {
-    duration: theme.transitions.duration.shortest,
-  }),
-}));
-
-export default function RecipeReviewCard() {
-  const [expanded, setExpanded] = React.useState(false);
-
-  const handleExpandClick = () => {
-    setExpanded(!expanded);
-  };
-
+export default function Post() {
   return (
-    <Card sx={{ maxWidth: 345 }}>
-      <CardHeader
-        avatar={
-          <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
-            M
-          </Avatar>
-        }
-        action={
-          <IconButton aria-label="settings">
-            <MoreVertIcon />
-          </IconButton>
-        }
-        title="Shrimp and Chorizo Paella"
-        subheader="September 14, 2022"
-      />
-      <CardMedia
-        component="img"
-        height="100%"
-        image="https://oitg.ch/wp-content/uploads/2022/03/OITG_FeedPost-2000x2500px.png"
-        alt="Paella dish"
-      />
-      <CardContent>
-        <Typography variant="body2" color="text.secondary">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
-          Minima placeat dicta similique eaque debitis 
-          labore cumque maiores quibusdam facilis optio.
-        </Typography>
-      </CardContent>
-      <CardActions disableSpacing>
-        <IconButton aria-label="add to favorites">
-          <FavoriteIcon />
-        </IconButton>
-        <IconButton aria-label="share">
-          <ShareIcon />
-        </IconButton>
-        <ExpandMore
-          expand={expanded}
-          onClick={handleExpandClick}
-          aria-expanded={expanded}
-          aria-label="show more"
+    <Card
+      variant="outlined"
+      sx={{
+        minWidth: 300,
+        '--Card-radius': (theme) => theme.vars.radius.xs,
+      }}>
+      <Box sx={{ display: 'flex', alignItems: 'center', pb: 1.5, gap: 1 }}>
+        <Box
+          sx={{
+            position: 'relative',
+            '&:before': {
+              content: '""',
+              position: 'absolute',
+              top: 0,
+              left: 0,
+              bottom: 0,
+              right: 0,
+              m: '-2px',
+              borderRadius: '50%',
+              background:
+                'linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%)',
+            },
+          }}
         >
-          <ExpandMoreIcon />
-        </ExpandMore>
-      </CardActions>
-      <Collapse in={expanded} timeout="auto" unmountOnExit>
-        <CardContent>
-          <Typography paragraph>Method:</Typography>
-          <Typography paragraph>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-            Voluptatibus, voluptatem!
-          </Typography>
-          <Typography paragraph>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. 
-            Labore asperiores repellat unde iusto. 
-            Eveniet, veritatis. Culpa veniam porro accusamus temporibus sequi 
-            quibusdam iure, suscipit rem facilis blanditiis ullam quis animi hic, 
-            aliquid magni, corporis quasi consequuntur quae debitis. 
-            Nesciunt enim eveniet pariatur magni tempora!
-          </Typography>
-          <Typography paragraph>
-            Add rice and stir very gently to distribute.  (Discard any mussels that don&apos;t open.)
-          </Typography>
-          <Typography>
-            Set aside off of the heat to let rest for 10 minutes, and then serve.
-          </Typography>
-        </CardContent>
-      </Collapse>
+          <Avatar
+            size="sm"
+            src="/static/logo.png"
+            sx={{ p: 0.5, border: '2px solid', borderColor: 'background.body' }}
+          />
+        </Box>
+        <Typography fontWeight="lg">MUI</Typography>
+        <IconButton variant="plain" color="neutral" size="sm" sx={{ ml: 'auto' }}>
+          <MoreHoriz />
+        </IconButton>
+      </Box>
+      <CardOverflow>
+        <AspectRatio>
+          <img src=".../Media/Club1.jpg" alt="" loading="lazy" />
+        </AspectRatio>
+      </CardOverflow>
+      <Box sx={{ display: 'flex', alignItems: 'center', mx: -1, my: 1 }}>
+        <Box sx={{ width: 0, display: 'flex', gap: 0.5 }}>
+          <IconButton variant="plain" color="neutral" size="sm">
+            <FavoriteBorder />
+          </IconButton>
+          <IconButton variant="plain" color="neutral" size="sm">
+            <ModeCommentOutlined />
+          </IconButton>
+          <IconButton variant="plain" color="neutral" size="sm">
+            <SendOutlined />
+          </IconButton>
+        </Box>
+        <Box sx={{ display: 'flex', alignItems: 'center', gap: 0.5, mx: 'auto' }}>
+          {[...Array(5)].map((_, index) => (
+            <Box
+              key={index}
+              sx={{
+                borderRadius: '50%',
+                width: `max(${6 - index}px, 3px)`,
+                height: `max(${6 - index}px, 3px)`,
+                bgcolor: index === 0 ? 'primary.solidBg' : 'background.level3',
+              }}
+            />
+          ))}
+        </Box>
+        <Box sx={{ width: 0, display: 'flex', flexDirection: 'row-reverse' }}>
+          <IconButton variant="plain" color="neutral" size="sm">
+            <BookmarkBorderRoundedIcon />
+          </IconButton>
+        </Box>
+      </Box>
+      <Link
+        component="button"
+        underline="none"
+        fontSize="sm"
+        fontWeight="lg"
+        textColor="text.primary"
+      >
+        8.1M Likes
+      </Link>
+      <Typography fontSize="sm">
+        <Link
+          component="button"
+          color="neutral"
+          fontWeight="lg"
+          textColor="text.primary"
+        >
+          MUI
+        </Link>{' '}
+        The React component library you always wanted
+      </Typography>
+      <Link
+        component="button"
+        underline="none"
+        fontSize="sm"
+        startDecorator="…"
+        sx={{ color: 'text.tertiary' }}
+      >
+        more
+      </Link>
+      <Link
+        component="button"
+        underline="none"
+        fontSize="10px"
+        sx={{ color: 'text.tertiary', my: 0.5 }}
+      >
+        2 DAYS AGO
+      </Link>
+      <CardOverflow sx={{ p: 'var(--Card-padding)', display: 'flex' }}>
+        <IconButton size="sm" variant="plain" color="neutral" sx={{ ml: -1 }}>
+          <Face />
+        </IconButton>
+        <Input
+          variant="plain"
+          size="sm"
+          placeholder="Add a comment…"
+          sx={{ flexGrow: 1, mr: 1, '--Input-focusedThickness': '0px' }}
+        />
+        <Link disabled underline="none" role="button">
+          Post
+        </Link>
+      </CardOverflow>
     </Card>
   );
 }

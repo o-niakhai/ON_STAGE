@@ -7,12 +7,12 @@ const setActive = ({isActive}) => isActive ? 'active-link' : '';
 const Layout = () => {
     return (
         <>
-            <TopBar>
-                <NavLink to="/" className={setActive}>Home</NavLink>
-                <NavLink to="/News" className={setActive}>News</NavLink>
-                <NavLink to="/calendar" className={setActive}>Calendar</NavLink>
-                <NavLink to="/components/" className={setActive}>ContentArtist</NavLink>
-            </TopBar>
+            <Routes>
+                <Route to="/" className={setActive}>Home</Route>
+                <Route to="/News" className={setActive}>News</Route>
+                <Route to="/calendar" className={setActive}>Calendar</Route>
+                <Route to="/components/" className={setActive}>ContentArtist</Route>
+            </Routes>
             <main className="container">
                 <Outlet/>
             </main>
