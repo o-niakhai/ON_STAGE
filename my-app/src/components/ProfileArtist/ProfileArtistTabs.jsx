@@ -16,8 +16,6 @@ import Residents from './Residents/Residents';
 import CalendarCmp from './Calendar/Calendar'
 import ScreenShareIcon from '@mui/icons-material/ScreenShare';
 
-
-
 // function TabPanel(props) {
 //     const { children, value, index, ...other } = props;
 //     return (
