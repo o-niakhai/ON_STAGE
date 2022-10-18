@@ -1,9 +1,9 @@
 import * as React from 'react';
-import PropTypes from 'prop-types';
-import {  Routes, Route } from 'react-router-dom';
+// import PropTypes from 'prop-types';
+// import {  Routes, Route } from 'react-router-dom';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
-import Typography from '@mui/material/Typography';
+// import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import AddCommentRoundedIcon from '@mui/icons-material/AddCommentRounded';
 import FeaturedPlayListRoundedIcon from '@mui/icons-material/FeaturedPlayListRounded';
@@ -13,51 +13,78 @@ import About from './About/About';
 import Message from './Message/Message';
 import Cooperation from './Cooperation/Cooperation';
 import Residents from './Residents/Residents';
-import CalendarComp from './Calendar/Calendar'
+import CalendarCmp from './Calendar/Calendar'
+import ScreenShareIcon from '@mui/icons-material/ScreenShare';
 
 
 
-function TabPanel(props) {
-    const { children, value, index, ...other } = props;
-    return (
-        <div
-            role="tabpanel"
-            hidden={value !== index}
-            id={`simple-tabpanel-${index}`}
-            aria-labelledby={`simple-tab-${index}`}
-            {...other}>
-            {value === index && (
-                <Box sx={{ p: 3 }}>
-                    <Typography>{children}</Typography>
-                </Box>
-            )}
-        </div>
-    );
-}
+// function TabPanel(props) {
+//     const { children, value, index, ...other } = props;
+//     return (
+//         <div
+//             role="tabpanel"
+//             hidden={value !== index}
+//             id={`simple-tabpanel-${index}`}
+//             aria-labelledby={`simple-tab-${index}`}
+//             {...other}>
+//             {value === index && (
+//                 <Box sx={{ p: 3 }}>
+//                     <Typography>{children}</Typography>
+//                 </Box>
+//             )}
+//         </div>
+//     );
+// }
 
-TabPanel.propTypes = {
-    children: PropTypes.node,
-    index: PropTypes.number.isRequired,
-    value: PropTypes.number.isRequired,
-};
+// TabPanel.propTypes = {
+//     children: PropTypes.node,
+//     index: PropTypes.number.isRequired,
+//     value: PropTypes.number.isRequired,
+// };
 
-function a11yProps(index) {
-    return {
-        id: `simple-tab-${index}`,
-        'aria-controls': `simple-tabpanel-${index}`,
-    };
-}
-export default function BasicTabs() {
-    const [value, setValue] = React.useState(0);
+// function a11yProps(index) {
+//     return {
+//         id: `simple-tab-${index}`,
+//         'aria-controls': `simple-tabpanel-${index}`,
+//     };
+// }
+// export default function ProfileArtistTabs() {
+//     const [value, setValue] = React.useState(0);
 
-    const handleChange = (event, newValue) => {
-        setValue(newValue);
-    };
+//     const handleChange = (event, newValue) => {
+//         setValue(newValue);
+//     };
+const ProfileArtistTabs = props => {
+  const { match, history } = props;
+  const { params } = match;
+  const { page } = params;
 
+  const tabNameToIndex = {
+    0: "About",
+    1: "Message",
+    2: "Cooperation",
+    3: "Residents",
+    4: "Calendar"
+  };
+
+  const indexToTabName = {
+    About: 0,
+    Message: 1,
+    Cooperation: 2,
+    Residents: 3,
+    Calendar: 4
+  };
+
+  const [selectedTab, setSelectedTab] = React.useState(indexToTabName[page]);
+
+  const handleChange = (event, newValue) => {
+    history.push(`/${tabNameToIndex[newValue]}`);
+    setSelectedTab(newValue);
+  };
     return (
         <Box sx={{ width: '100%' }}>
             <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-                <Tabs value={value} onChange={handleChange} aria-label="basic tabs example"
+                <Tabs value={selectedTab} onChange={handleChange}
                     TabIndicatorProps={{
                         sx: {
                             bgcolor: "#45D083",
@@ -66,41 +93,42 @@ export default function BasicTabs() {
                     }}>
                     <Tab
                         to="./About/About.jsx"
-                        label="About" {...a11yProps(0)}
+                        label="About" 
                         style={{ fontSize: '0.7rem', color: '#949494' }}
                         icon={<FeaturedPlayListRoundedIcon />}
-                        iconPosition="start"
-                        value="About"/>
+                        iconPosition="start"/>
                     <Tab
                         to="./Message/Message.jsx"
-                        label="Message" {...a11yProps(1)}
+                        label="Message" 
                         style={{ fontSize: '0.7rem', color: '#949494' }}
                         icon={<AddCommentRoundedIcon />}
-                        iconPosition="start"
-                        value="Message"/>
+                        iconPosition="start"/>
                     <Tab
                         to="./Cooperation/Cooperation.jsx"
-                        label="Cooperation" {...a11yProps(2)}
+                        label="Cooperation"
                         style={{ fontSize: '0.7rem', color: '#949494' }}
                         icon={<BusinessCenterRoundedIcon />}
                         iconPosition="start"
                         value="Cooperation"/>
                     <Tab
                         to="./Residents/Residents.jsx"
-                        label="Residents" {...a11yProps(3)}
+                        label="Residents" 
                         style={{ fontSize: '0.7rem', color: '#949494' }}
                         icon={<BadgeRoundedIcon />}
-                        iconPosition="start"
-                        value="Residents"/>
-                    {/* <Tab
-                        label="Calendar" {...a11yProps(4)}
+                        iconPosition="start"/>
+                    <Tab
+                        label="Calendar" 
                         style={{ fontSize: '0.7rem', color: '#949494' }}
-                        icon={<ScreenShareRoundedIcon />}
-                        iconPosition="start"
-                        value="Calendar"/>  */}
+                        icon={<ScreenShareIcon />}
+                        iconPosition="start"/> 
                 </Tabs>
             </Box>
-            <Routes>
+            {selectedTab === 0 && <About/>}
+            {selectedTab === 1 && <Message/>}
+            {selectedTab === 2 && <Cooperation/>}
+            {selectedTab === 3 && <Residents/>}
+            {selectedTab === 4 && <CalendarCmp/>}
+            {/* <Routes>
                 <Route>
                     <Route path='./About/About' element={<About/>} />
                     <Route path='./Calendar/Calendar.jsx' element={<CalendarComp/>} />
@@ -108,7 +136,8 @@ export default function BasicTabs() {
                     <Route path='./Cooperation/Cooperation.jsx' element={<Cooperation/>} />
                     <Route path='./Residents/Residents.jsx' element={<Residents/>} />
                 </Route>
-            </Routes>
+            </Routes> */}
         </Box>
     );
 }
+export default ProfileArtistTabs;
