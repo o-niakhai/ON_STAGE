@@ -92,26 +92,22 @@ const ProfileArtistTabs = props => {
                         }
                     }}>
                     <Tab
-                        to="./About/About.jsx"
                         label="About" 
                         style={{ fontSize: '0.7rem', color: '#949494' }}
                         icon={<FeaturedPlayListRoundedIcon />}
                         iconPosition="start"/>
                     <Tab
-                        to="./Message/Message.jsx"
                         label="Message" 
                         style={{ fontSize: '0.7rem', color: '#949494' }}
                         icon={<AddCommentRoundedIcon />}
                         iconPosition="start"/>
                     <Tab
-                        to="./Cooperation/Cooperation.jsx"
                         label="Cooperation"
                         style={{ fontSize: '0.7rem', color: '#949494' }}
                         icon={<BusinessCenterRoundedIcon />}
                         iconPosition="start"
                         value="Cooperation"/>
                     <Tab
-                        to="./Residents/Residents.jsx"
                         label="Residents" 
                         style={{ fontSize: '0.7rem', color: '#949494' }}
                         icon={<BadgeRoundedIcon />}
