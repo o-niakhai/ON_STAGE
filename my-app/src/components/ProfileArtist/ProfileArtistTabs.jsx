@@ -65,7 +65,7 @@ const ProfileArtistTabs = props => {
     4: "Calendar"
   };
 
-  
+
   const indexToTabName = {
     About: 0,
     Message: 1,
