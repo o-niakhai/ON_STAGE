@@ -1,9 +1,6 @@
 import * as React from 'react';
-// import PropTypes from 'prop-types';
-// import {  Routes, Route } from 'react-router-dom';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
-// import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import AddCommentRoundedIcon from '@mui/icons-material/AddCommentRounded';
 import FeaturedPlayListRoundedIcon from '@mui/icons-material/FeaturedPlayListRounded';
@@ -16,42 +13,7 @@ import Residents from './Residents/Residents';
 import CalendarCmp from './Calendar/Calendar'
 import ScreenShareIcon from '@mui/icons-material/ScreenShare';
 
-// function TabPanel(props) {
-//     const { children, value, index, ...other } = props;
-//     return (
-//         <div
-//             role="tabpanel"
-//             hidden={value !== index}
-//             id={`simple-tabpanel-${index}`}
-//             aria-labelledby={`simple-tab-${index}`}
-//             {...other}>
-//             {value === index && (
-//                 <Box sx={{ p: 3 }}>
-//                     <Typography>{children}</Typography>
-//                 </Box>
-//             )}
-//         </div>
-//     );
-// }
 
-// TabPanel.propTypes = {
-//     children: PropTypes.node,
-//     index: PropTypes.number.isRequired,
-//     value: PropTypes.number.isRequired,
-// };
-
-// function a11yProps(index) {
-//     return {
-//         id: `simple-tab-${index}`,
-//         'aria-controls': `simple-tabpanel-${index}`,
-//     };
-// }
-// export default function ProfileArtistTabs() {
-//     const [value, setValue] = React.useState(0);
-
-//     const handleChange = (event, newValue) => {
-//         setValue(newValue);
-//     };
 const ProfileArtistTabs = props => {
   const { match, history } = props;
   const { params } = match;
@@ -123,15 +85,6 @@ const ProfileArtistTabs = props => {
             {selectedTab === 2 && <Cooperation/>}
             {selectedTab === 3 && <Residents/>}
             {selectedTab === 4 && <CalendarCmp/>}
-            {/* <Routes>
-                <Route>
-                    <Route path='./About/About' element={<About/>} />
-                    <Route path='./Calendar/Calendar.jsx' element={<CalendarComp/>} />
-                    <Route path='./Message/Message.jsx' element={<Message/>} />
-                    <Route path='./Cooperation/Cooperation.jsx' element={<Cooperation/>} />
-                    <Route path='./Residents/Residents.jsx' element={<Residents/>} />
-                </Route>
-            </Routes> */}
         </Box>
     );
 }
