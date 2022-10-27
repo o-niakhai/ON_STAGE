@@ -13,7 +13,6 @@ import Residents from './Residents/Residents';
 import CalendarCmp from './Calendar/Calendar'
 import ScreenShareIcon from '@mui/icons-material/ScreenShare';
 
-
 const ProfileArtistTabs = props => {
   const { match, history } = props;
   const { params } = match;
@@ -26,7 +25,6 @@ const ProfileArtistTabs = props => {
     3: "Residents",
     4: "Calendar"
   };
-
 
   const indexToTabName = {
     About: 0,
