@@ -1,6 +1,5 @@
 import {  Outlet, NavLink } from "react-router-dom";
 import React from 'react';
-import TopBar from "./TopBar";
 
 const setActive = ({isActive}) => isActive ? 'active-link' : '';
 
