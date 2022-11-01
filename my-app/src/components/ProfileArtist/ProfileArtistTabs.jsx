@@ -40,6 +40,7 @@ const ProfileArtistTabs = props => {
     history.push(`/${tabNameToIndex[newValue]}`);
     setSelectedTab(newValue);
   };
+  
     return (
         <Box sx={{ width: '100%' }}>
             <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
@@ -86,4 +87,5 @@ const ProfileArtistTabs = props => {
         </Box>
     );
 }
+
 export default ProfileArtistTabs;
