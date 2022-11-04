@@ -87,5 +87,4 @@ const ProfileArtistTabs = props => {
         </Box>
     );
 }
-
 export default ProfileArtistTabs;
