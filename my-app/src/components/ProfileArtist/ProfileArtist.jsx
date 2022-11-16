@@ -38,6 +38,5 @@ export default function ProfileArtist() {
                 </Grid>
             </Grid>
         </Box>
-        
     );
 }
