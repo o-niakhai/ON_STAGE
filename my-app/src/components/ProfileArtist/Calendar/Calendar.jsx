@@ -18,9 +18,7 @@ export default function CalendarCmp () {
             width: "100%",
             backgroundImage:
               "url(https://s-trojmiasto.pl/zdj/c/n/3/3139/2000x0/3139271.jpg)",
-            backgroundSize: "cover",
-          }}
-        />
+            backgroundSize: "cover" }} />
       );
     }
   };

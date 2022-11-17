@@ -49,6 +49,7 @@ const ProfileArtistTabs = props => {
                             height: "2px"
                         }
                     }}>
+                        
                     <Tab
                         label="About" 
                         style={{ fontSize: '0.7rem', color: '#949494' }}

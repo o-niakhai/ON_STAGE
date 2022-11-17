@@ -18,8 +18,7 @@ export default function ProfileArtist() {
     return (
         <Box sx={{
             display: 'flex',
-            flexGrow: 1
-        }}>
+            flexGrow: 1 }}>
             <Grid container spacing={2} columns={12} sx={{ boxShadow: 0 }}>
                 <Grid item xs={3}>
                     <Item sx={{ boxShadow: 0 }}>
