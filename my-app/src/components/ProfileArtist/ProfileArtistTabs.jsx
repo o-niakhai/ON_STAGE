@@ -33,6 +33,7 @@ const ProfileArtistTabs = props => {
     Residents: 3,
     Calendar: 4
   };
+
   const [selectedTab, setSelectedTab] = React.useState(indexToTabName[page]);
 
   const handleChange = (event, newValue) => {
@@ -49,7 +50,6 @@ const ProfileArtistTabs = props => {
                             height: "2px"
                         }
                     }}>
-                        
                     <Tab
                         label="About" 
                         style={{ fontSize: '0.7rem', color: '#949494' }}
@@ -86,4 +86,5 @@ const ProfileArtistTabs = props => {
         </Box>
     );
 }
+
 export default ProfileArtistTabs;
