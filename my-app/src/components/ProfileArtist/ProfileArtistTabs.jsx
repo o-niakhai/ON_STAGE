@@ -34,6 +34,7 @@ const ProfileArtistTabs = props => {
     Calendar: 4
   };
 
+  
   const [selectedTab, setSelectedTab] = React.useState(indexToTabName[page]);
 
   const handleChange = (event, newValue) => {

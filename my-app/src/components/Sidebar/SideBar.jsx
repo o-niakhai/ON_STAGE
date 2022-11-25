@@ -5,6 +5,8 @@ import Typography from '@mui/material/Typography';
 import ArtistTags from './ArtistTags';
 import SidePlayer from './ArtistPlayer';
 
+
+
 export default function SideBar() {
   return (
     <Box style={{ backgroundColor: '#F5F6FA' }}>
