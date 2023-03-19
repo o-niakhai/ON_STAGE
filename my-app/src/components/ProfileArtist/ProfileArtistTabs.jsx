@@ -1,62 +1,50 @@
 import * as React from 'react';
-import PropTypes from 'prop-types';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
-import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import AddCommentRoundedIcon from '@mui/icons-material/AddCommentRounded';
 import FeaturedPlayListRoundedIcon from '@mui/icons-material/FeaturedPlayListRounded';
 import BusinessCenterRoundedIcon from '@mui/icons-material/BusinessCenterRounded';
 import BadgeRoundedIcon from '@mui/icons-material/BadgeRounded';
-import ScreenShareRoundedIcon from '@mui/icons-material/ScreenShareRounded';
 import About from './About/About';
 import Message from './Message/Message';
 import Cooperation from './Cooperation/Cooperation';
 import Residents from './Residents/Residents';
-import { Routes, Route, Link } from "react-router-dom";
+import CalendarCmp from './Calendar/Calendar'
+import ScreenShareIcon from '@mui/icons-material/ScreenShare';
 
+const ProfileArtistTabs = props => {
+  const { match, history } = props;
+  const { params } = match;
+  const { page } = params;
 
-function TabPanel(props) {
-    const { children, value, index, ...other } = props;
-    return (
-        <div
-            role="tabpanel"
-            hidden={value !== index}
-            id={`simple-tabpanel-${index}`}
-            aria-labelledby={`simple-tab-${index}`}
-            {...other}>
-            {value === index && (
-                <Box sx={{ p: 3 }}>
-                    <Typography>{children}</Typography>
-                </Box>
-            )}
-        </div>
-    );
-}
+  const tabNameToIndex = {
+    0: "About",
+    1: "Message",
+    2: "Cooperation",
+    3: "Residents",
+    4: "Calendar"
+  };
 
-TabPanel.propTypes = {
-    children: PropTypes.node,
-    index: PropTypes.number.isRequired,
-    value: PropTypes.number.isRequired,
-};
+  const indexToTabName = {
+    About: 0,
+    Message: 1,
+    Cooperation: 2,
+    Residents: 3,
+    Calendar: 4
+  };
 
-function a11yProps(index) {
-    return {
-        id: `simple-tab-${index}`,
-        'aria-controls': `simple-tabpanel-${index}`,
-    };
-}
-export default function BasicTabs() {
-    const [value, setValue] = React.useState(0);
+  
+  const [selectedTab, setSelectedTab] = React.useState(indexToTabName[page]);
 
-    const handleChange = (event, newValue) => {
-        setValue(newValue);
-    };
-
+  const handleChange = (event, newValue) => {
+    history.push(`/${tabNameToIndex[newValue]}`);
+    setSelectedTab(newValue);
+  };
     return (
         <Box sx={{ width: '100%' }}>
             <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-                <Tabs value={value} onChange={handleChange} aria-label="basic tabs example"
+                <Tabs value={selectedTab} onChange={handleChange}
                     TabIndicatorProps={{
                         sx: {
                             bgcolor: "#45D083",
@@ -64,58 +52,39 @@ export default function BasicTabs() {
                         }
                     }}>
                     <Tab
-                        to="/"
-                        label="About" {...a11yProps(0)}
+                        label="About" 
                         style={{ fontSize: '0.7rem', color: '#949494' }}
                         icon={<FeaturedPlayListRoundedIcon />}
-                        iconPosition="start"
-                        value="About"
-                    />
+                        iconPosition="start"/>
                     <Tab
-                        to="/message"
-                        label="Message" {...a11yProps(1)}
+                        label="Message" 
                         style={{ fontSize: '0.7rem', color: '#949494' }}
                         icon={<AddCommentRoundedIcon />}
-                        iconPosition="start"
-                        value="Message"
-                    />
+                        iconPosition="start"/>
                     <Tab
-                        label="Cooperation" {...a11yProps(2)}
+                        label="Cooperation"
                         style={{ fontSize: '0.7rem', color: '#949494' }}
                         icon={<BusinessCenterRoundedIcon />}
                         iconPosition="start"
-                        value="Cooperation"
-                    />
+                        value="Cooperation"/>
                     <Tab
-                        label="Residents" {...a11yProps(3)}
+                        label="Residents" 
                         style={{ fontSize: '0.7rem', color: '#949494' }}
                         icon={<BadgeRoundedIcon />}
-                        iconPosition="start"
-                        value="Residents"
-                    />
+                        iconPosition="start"/>
                     <Tab
-                        label="Share" {...a11yProps(4)}
+                        label="Calendar" 
                         style={{ fontSize: '0.7rem', color: '#949494' }}
-                        icon={<ScreenShareRoundedIcon />}
-                        iconPosition="start"
-                        value="Share"
-                    />
+                        icon={<ScreenShareIcon />}
+                        iconPosition="start"/> 
                 </Tabs>
             </Box>
-            <Routes>
-            <TabPanel value={About} index={0}>
-                <Route path="/" element={<About/>}/>
-            </TabPanel>
-            <TabPanel value={Message} index={1}>
-                <Message />
-            </TabPanel>
-            <TabPanel value={Cooperation} index={2}>
-                <Cooperation />
-            </TabPanel>
-            <TabPanel value={Residents} index={3}>
-                <Residents />
-            </TabPanel>
-            </Routes>
+            {selectedTab === 0 && <About/>}
+            {selectedTab === 1 && <Message/>}
+            {selectedTab === 2 && <Cooperation/>}
+            {selectedTab === 3 && <Residents/>}
+            {selectedTab === 4 && <CalendarCmp/>}
         </Box>
     );
 }
+export default ProfileArtistTabs;

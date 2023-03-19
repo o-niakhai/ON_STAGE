@@ -15,11 +15,11 @@ export default function Rider() {
                 boxShadow: 2,
                 borderRadius: 2,
                 width: 170,
-                height: 140,
+                height: 140
             }}>
             <LocalActivityIcon
                 sx={{
-                    fontSize: 50,
+                    fontSize: 50
                 }} />
             <Typography>
                 Concert Rider
